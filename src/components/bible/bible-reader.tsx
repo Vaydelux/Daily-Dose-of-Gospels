@@ -10,6 +10,7 @@ import {
   type RefObject,
 } from "react";
 import {
+  AudioLines,
   BookOpen,
   ChevronLeft,
   ChevronRight,
@@ -39,7 +40,7 @@ import { nextChapterOf, prevChapterOf } from "@/lib/bible/books-meta";
 import { RED_LETTER_BOOKS } from "@/lib/bible/red-letter";
 import { PERF_LITE_EVENT, PERF_LITE_KEY } from "@/components/site/perf-probe";
 import { BookSpread } from "./book-spread";
-import { useNarration, type NarrationRate } from "./use-narration";
+import { useNarration, VOICE_PRESETS, type NarrationRate } from "./use-narration";
 import type { BibleBookMeta, ReaderDoc, ReaderVerse, TranslationMeta } from "./types";
 
 const POS_KEY = "ddog.bible.pos.v1";
@@ -76,6 +77,14 @@ function speechLang(translationId: string, translations: TranslationMeta[]): str
   const l = language.toLowerCase();
   if (l.startsWith("english")) return "en-US";
   if (l.startsWith("chinese")) return "zh-CN";
+  if (l.startsWith("tagalog") || l.startsWith("filipino")) return "tl-PH";
+  if (l.startsWith("spanish")) return "es-ES";
+  if (l.startsWith("french")) return "fr-FR";
+  if (l.startsWith("german")) return "de-DE";
+  if (l.startsWith("portuguese")) return "pt-BR";
+  if (l.startsWith("romanian")) return "ro-RO";
+  if (l.startsWith("czech")) return "cs-CZ";
+  if (l.startsWith("latin")) return "la";
   const base = language.split(/[\s(—-]/)[0];
   return base ? base.toLowerCase() : "en";
 }
@@ -697,8 +706,8 @@ export function BibleReader({
           </form>
 
           <Select value={translation} onValueChange={changeTranslation} disabled={controlsBusy}>
-            <SelectTrigger aria-label="Translation" className="h-9 w-[214px] rounded-full bg-card text-sm">
-              <span className="flex min-w-0 items-center gap-1.5">
+            <SelectTrigger aria-label="Translation" className="h-9 w-[214px] overflow-hidden rounded-full bg-card text-sm">
+              <span className="flex min-w-0 flex-1 items-center gap-1.5 overflow-hidden">
                 <Languages className="h-3.5 w-3.5 shrink-0 text-gold" aria-hidden />
                 <SelectValue />
               </span>
@@ -826,7 +835,7 @@ export function BibleReader({
                 value={String(narration.rate)}
                 onValueChange={(v) => narration.changeRate(Number(v) as NarrationRate)}
               >
-                <SelectTrigger aria-label="Narration speed" className="h-9 w-[84px] rounded-full bg-card text-sm">
+                <SelectTrigger aria-label="Narration speed" className="h-9 w-[84px] overflow-hidden rounded-full bg-card text-sm">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -835,14 +844,71 @@ export function BibleReader({
                   <SelectItem value="1.25">1.25×</SelectItem>
                 </SelectContent>
               </Select>
+              {(() => {
+                const activeLangPrefix = speechLang(doc.translationId, translations).split("-")[0].toLowerCase();
+                const matchingVoices = narration.voices.filter((v) =>
+                  v.lang.toLowerCase().startsWith(activeLangPrefix),
+                );
+                const otherVoices = narration.voices.filter(
+                  (v) => !v.lang.toLowerCase().startsWith(activeLangPrefix),
+                );
+                const selectedVoiceValue =
+                  narration.voiceId.startsWith("sys:") &&
+                  !narration.voices.some((v) => `sys:${v.voiceURI}` === narration.voiceId)
+                    ? "preset:auto"
+                    : narration.voiceId;
+                return (
+                  <Select value={selectedVoiceValue} onValueChange={narration.changeVoice}>
+                    <SelectTrigger
+                      aria-label="Narration voice"
+                      className="h-9 w-[164px] overflow-hidden rounded-full bg-card text-sm"
+                    >
+                      <span className="flex min-w-0 flex-1 items-center gap-1.5 overflow-hidden">
+                        <AudioLines className="h-3.5 w-3.5 shrink-0 text-gold" aria-hidden />
+                        <SelectValue placeholder="Voice" />
+                      </span>
+                    </SelectTrigger>
+                    <SelectContent className="max-h-80">
+                      <SelectGroup>
+                        <SelectLabel>Reading styles</SelectLabel>
+                        {VOICE_PRESETS.map((p) => (
+                          <SelectItem key={p.value} value={p.value}>
+                            {p.label}
+                          </SelectItem>
+                        ))}
+                      </SelectGroup>
+                      {matchingVoices.length > 0 && (
+                        <SelectGroup>
+                          <SelectLabel>Language voices</SelectLabel>
+                          {matchingVoices.map((v) => (
+                            <SelectItem key={v.voiceURI} value={`sys:${v.voiceURI}`}>
+                              {v.name}
+                            </SelectItem>
+                          ))}
+                        </SelectGroup>
+                      )}
+                      {otherVoices.length > 0 && (
+                        <SelectGroup>
+                          <SelectLabel>Other voices</SelectLabel>
+                          {otherVoices.slice(0, 20).map((v) => (
+                            <SelectItem key={v.voiceURI} value={`sys:${v.voiceURI}`}>
+                              {v.name} ({v.lang})
+                            </SelectItem>
+                          ))}
+                        </SelectGroup>
+                      )}
+                    </SelectContent>
+                  </Select>
+                );
+              })()}
             </div>
           ) : null}
         </div>
 
         <div className="flex flex-wrap items-center gap-2.5">
           <Select value={doc?.bookId ?? ""} onValueChange={changeBook} disabled={controlsBusy}>
-            <SelectTrigger aria-label="Book" className="h-9 w-[168px] rounded-full bg-card text-sm">
-              <span className="flex min-w-0 items-center gap-1.5">
+            <SelectTrigger aria-label="Book" className="h-9 w-[168px] overflow-hidden rounded-full bg-card text-sm">
+              <span className="flex min-w-0 flex-1 items-center gap-1.5 overflow-hidden">
                 <BookOpen className="h-3.5 w-3.5 shrink-0 text-gold" aria-hidden />
                 <SelectValue placeholder="Book" />
               </span>
