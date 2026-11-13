@@ -1,0 +1,30 @@
+# Daily Dose of Gospels — kept out of Vercel uploads
+# (dev tooling, sandbox artifacts, and local data that never ship)
+
+# local environment values (only dashboard env vars reach the build)
+.env
+.env.*
+
+# local database + user content
+db/
+upload/
+download/
+
+# sandbox/dev tooling (art regeneration scripts, runtime probes)
+scripts/
+tests/
+examples/
+Caddyfile
+
+# build artifacts & logs
+.vercel
+.next
+node_modules
+*.log
+dev.log
+server.log
+tool-results/
+agent-ctx/
+
+# OS noise
+.DS_Store

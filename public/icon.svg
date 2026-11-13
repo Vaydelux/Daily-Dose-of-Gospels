@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="36%" r="80%">
+      <stop offset="0%" stop-color="#3D4F84"/>
+      <stop offset="52%" stop-color="#2A3A66"/>
+      <stop offset="100%" stop-color="#1C2947"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="12" x2="0" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F1CE83"/>
+      <stop offset="55%" stop-color="#D7A748"/>
+      <stop offset="100%" stop-color="#B98B33"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="44%" r="50%">
+      <stop offset="0%" stop-color="#E8B64C" stop-opacity="0.5"/>
+      <stop offset="55%" stop-color="#E8B64C" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#E8B64C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="31" fill="url(#halo)"/>
+  <circle cx="32" cy="32" r="24.5" fill="none" stroke="#E8B64C" stroke-opacity="0.30" stroke-width="1.4"/>
+  <circle cx="32" cy="32" r="26.7" fill="none" stroke="#E8B64C" stroke-opacity="0.10" stroke-width="0.8"/>
+  <g stroke="url(#gold)" stroke-width="4.2" stroke-linecap="round">
+    <line x1="32" y1="15" x2="32" y2="49"/>
+    <line x1="22" y1="27.5" x2="42" y2="27.5"/>
+  </g>
+</svg>

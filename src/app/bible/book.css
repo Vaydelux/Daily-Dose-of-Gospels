@@ -1,0 +1,561 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   The Read-the-Bible reader — a book that behaves like a book.
+
+   Geometry
+   ─────────
+   .bible-stage      perspective wrapper (cover + open book)
+   .bible-book       the open volume; two page slots in spread mode
+   .bible-slot       fixed page positions (left / right)
+   .bible-sheet      the flipping sheet (axis-y in spread, axis-x in single)
+   .bible-face       front / back faces of the sheet (backface hidden)
+
+   Materials
+   ─────────
+   .bible-page       paper: parchment tone, twin gold frame, gutter shade
+   .bible-ribbon     gilded bookmark ribbon hanging from the spine
+   .bible-cover      the closed navy-leather cover with gold foil
+   ══════════════════════════════════════════════════════════════════════════ */
+
+.bible-stage {
+  --paper: #fdf8ec;
+  --paper-deep: #f6edda;
+  --paper-line: rgb(150 116 51 / 0.10);
+  --ink: #31415c;
+  --ink-soft: #5b6a84;
+  --gold-foil: #c49a45;
+  --gold-soft: rgb(196 154 69 / 0.34);
+  --gutter-shade: rgb(38 28 8 / 0.16);
+  --page-edge-a: #f2e9d3;
+  --page-edge-b: #ddd0ae;
+  --leather-a: #2e4069;
+  --leather-b: #22335a;
+  --leather-c: #141f3a;
+  position: relative;
+  margin-inline: auto;
+  perspective: 2400px;
+}
+
+.dark .bible-stage {
+  --paper: #202c49;
+  --paper-deep: #1a2440;
+  --paper-line: rgb(233 226 207 / 0.07);
+  --ink: #e9e2cf;
+  --ink-soft: #b7b09a;
+  --gold-foil: #d7a748;
+  --gold-soft: rgb(215 167 72 / 0.30);
+  --gutter-shade: rgb(0 0 0 / 0.34);
+  --page-edge-a: #2a3757;
+  --page-edge-b: #131c33;
+  --leather-a: #26375c;
+  --leather-b: #1b2a4a;
+  --leather-c: #0e1830;
+}
+
+/* ── The open book ──────────────────────────────────────────────────────── */
+
+.bible-book {
+  position: relative;
+  margin-inline: auto;
+  width: min(980px, 100%);
+  height: clamp(500px, 72vh, 700px);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+}
+
+.bible-stage.mode-single .bible-book {
+  width: min(600px, 100%);
+  height: clamp(460px, 66vh, 620px);
+}
+
+/* arriving flutter after a chapter jump */
+@keyframes ddog-book-arrive {
+  from { opacity: 0.25; transform: rotateX(7deg) scale(0.984); }
+  to   { opacity: 1; transform: none; }
+}
+.bible-book.arrive { animation: ddog-book-arrive 0.6s cubic-bezier(0.21, 0.47, 0.32, 0.98) both; }
+
+/* page-block edges peeking on the outer sides — the stacked pages */
+.bible-edge {
+  position: absolute;
+  top: 7px;
+  bottom: 7px;
+  width: 8px;
+  border-radius: 3px;
+  background: repeating-linear-gradient(to right, var(--page-edge-a) 0 1px, var(--page-edge-b) 1px 2px);
+  pointer-events: none;
+}
+.bible-edge.left { left: -8px; border-radius: 3px 0 0 3px; }
+.bible-edge.right { right: -8px; border-radius: 0 3px 3px 0; }
+
+/* the volume's resting shadow */
+.bible-book::after {
+  content: "";
+  position: absolute;
+  inset: 8px -14px -14px 8px;
+  z-index: -1;
+  border-radius: 14px;
+  background: rgb(15 25 44 / 0.35);
+  filter: blur(22px);
+}
+
+/* ── Page slots ─────────────────────────────────────────────────────────── */
+
+.bible-slot { position: absolute; top: 0; bottom: 0; z-index: 10; }
+.bible-slot.at-left { left: 0; width: 50%; }
+.bible-slot.at-right { right: 0; width: 50%; }
+.bible-stage.mode-single .bible-slot.at-left { display: none; }
+.bible-stage.mode-single .bible-slot.at-right { left: 0; width: 100%; }
+
+/* ── The flipping sheet ─────────────────────────────────────────────────── */
+
+.bible-sheet {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 30;
+  transform-style: preserve-3d;
+  pointer-events: none;
+  will-change: transform;
+}
+.bible-sheet.axis-y.at-right { right: 0; width: 50%; transform-origin: left center; }
+.bible-sheet.axis-y.at-left { left: 0; width: 50%; transform-origin: right center; }
+.bible-sheet.axis-x { left: 0; width: 100%; transform-origin: 50% 0%; }
+
+.bible-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.bible-sheet.axis-y .bible-face.back { transform: rotateY(180deg); }
+.bible-sheet.axis-x .bible-face.back { transform: rotateX(180deg); }
+
+@keyframes ddog-flip-next {
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(-180deg); }
+}
+@keyframes ddog-flip-prev {
+  from { transform: rotateY(0); }
+  to   { transform: rotateY(180deg); }
+}
+@keyframes ddog-flip-up-next {
+  from { transform: rotateX(0); }
+  to   { transform: rotateX(-180deg); }
+}
+@keyframes ddog-flip-up-prev {
+  from { transform: rotateX(0); }
+  to   { transform: rotateX(180deg); }
+}
+.bible-sheet.turn-next { animation: ddog-flip-next 1.05s cubic-bezier(0.45, 0.05, 0.22, 1) forwards; }
+.bible-sheet.turn-prev { animation: ddog-flip-prev 1.05s cubic-bezier(0.45, 0.05, 0.22, 1) forwards; }
+.bible-sheet.axis-x.turn-next { animation-name: ddog-flip-up-next; }
+.bible-sheet.axis-x.turn-prev { animation-name: ddog-flip-up-prev; }
+
+/* moving shade that sweeps the flipping sheet */
+@keyframes ddog-sheet-shade {
+  0%   { opacity: 0; }
+  45%  { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+.bible-sheet-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(105deg, rgb(15 20 35 / 0.75) 4%, rgb(15 20 35 / 0.18) 42%, transparent 72%);
+  animation: ddog-sheet-shade 1.05s ease both;
+}
+.bible-sheet.axis-x .bible-sheet-shade {
+  background: linear-gradient(to bottom, rgb(15 20 35 / 0.72) 2%, rgb(15 20 35 / 0.16) 38%, transparent 70%);
+}
+
+/* ── A single paper page ────────────────────────────────────────────────── */
+
+.bible-page {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px 5px 5px 8px;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 23px, var(--paper-line) 23px 24px),
+    radial-gradient(120% 90% at 50% 0%, var(--paper) 58%, var(--paper-deep) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgb(150 116 51 / 0.14),
+    0 1px 2px rgb(18 26 43 / 0.08),
+    0 18px 44px -18px rgb(18 26 43 / 0.30);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+/* gutter shading toward the spine + a whisper of shade on the outer edge */
+.bible-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to right, var(--gutter-shade), transparent 12%, transparent 88%, rgb(38 28 8 / 0.05));
+}
+.bible-slot.at-right .bible-page::before {
+  background: linear-gradient(to left, var(--gutter-shade), transparent 12%, transparent 88%, rgb(38 28 8 / 0.05));
+}
+.bible-stage.mode-single .bible-page::before {
+  background:
+    linear-gradient(to right, var(--gutter-shade), transparent 7%, transparent 93%, rgb(38 28 8 / 0.07)),
+    linear-gradient(to left, var(--gutter-shade), transparent 7%, transparent 93%, rgb(38 28 8 / 0.07));
+}
+
+/* twin gilded frame */
+.bible-page .frame-outer,
+.bible-page .frame-inner {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+  border: 1px solid var(--gold-soft);
+  border-radius: 4px;
+}
+.bible-page .frame-outer { inset: 9px; }
+.bible-page .frame-inner { inset: 13px; border-color: rgb(196 154 69 / 0.18); }
+
+/* running head */
+.bible-runninghead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: none;
+  padding: 22px 34px 8px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--gold-foil) 72%, var(--ink-soft));
+}
+.bible-runninghead::before,
+.bible-runninghead::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to right, transparent, rgb(196 154 69 / 0.45));
+}
+.bible-runninghead::after { background: linear-gradient(to left, transparent, rgb(196 154 69 / 0.45)); }
+
+/* the text block */
+.bible-page-inner {
+  position: relative;
+  z-index: 4;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 10px 36px 14px;
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.95;
+  text-align: justify;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+.bible-page-inner::-webkit-scrollbar { display: none; }
+
+.bible-verse { margin: 0 0 0.5em; }
+.bible-verse:last-child { margin-bottom: 0; }
+
+.bible-vnum {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.62em;
+  font-weight: 600;
+  color: var(--gold-foil);
+  position: relative;
+  top: -0.5em;
+  margin-right: 0.4em;
+  letter-spacing: 0.02em;
+}
+
+/* golden wash for searched verses */
+.bible-verse.hl {
+  background: linear-gradient(
+    to bottom,
+    transparent 6%,
+    color-mix(in oklab, var(--gold-foil) 17%, transparent) 6%,
+    color-mix(in oklab, var(--gold-foil) 17%, transparent) 94%,
+    transparent 94%
+  );
+  box-shadow: inset 3px 0 0 color-mix(in oklab, var(--gold-foil) 60%, transparent);
+  border-radius: 2px;
+}
+@keyframes ddog-verse-flash {
+  0% { background-color: color-mix(in oklab, var(--gold-foil) 42%, transparent); }
+  100% { background-color: transparent; }
+}
+.bible-verse.hl.anchor { animation: ddog-verse-flash 2.2s ease-out both; }
+
+/* ── Red-letter words of Christ ─────────────────────────────────────────── */
+/* Crimson ink after the tradition of printed red-letter editions. The verse
+   number stays gilded; the words themselves take the scarlet. */
+.bible-stage {
+  --woj: #a8221b;
+  --woj-soft: rgb(168 34 27 / 0.10);
+}
+.dark .bible-stage {
+  --woj: #e5968b;
+  --woj-soft: rgb(229 150 139 / 0.12);
+}
+.bible-verse.words {
+  color: var(--woj);
+}
+.bible-verse.words .bible-dropcap {
+  color: var(--woj);
+}
+
+/* ── The verse currently being read aloud ──────────────────────────────── */
+/* A gentle golden wash that follows the narration verse by verse. */
+.bible-verse.speaking {
+  transition: background-color 0.45s ease;
+  background-color: color-mix(in oklab, var(--gold-foil) 22%, transparent);
+  box-shadow: inset 3px 0 0 color-mix(in oklab, var(--gold-foil) 75%, transparent);
+  border-radius: 2px;
+}
+.bible-verse.speaking::after {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  margin-left: 0.5em;
+  border-radius: 999px;
+  background: var(--gold-foil);
+  opacity: 0.75;
+  animation: ddog-speaking-pulse 1.6s ease-in-out infinite;
+}
+@keyframes ddog-speaking-pulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.82); }
+  50% { opacity: 0.85; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bible-verse.speaking::after { animation: none; }
+}
+
+/* illuminated drop cap at a chapter opening */
+.bible-dropcap {
+  float: left;
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-weight: 600;
+  font-size: 3.15em;
+  line-height: 0.76;
+  padding: 0.075em 0.14em 0 0;
+  color: var(--ink);
+}
+
+/* folio */
+.bible-folio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: none;
+  padding: 6px 34px 18px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-soft);
+}
+.bible-folio .dot {
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: color-mix(in oklab, var(--gold-foil) 62%, transparent);
+}
+
+/* blank verso (odd page count) */
+.bible-page.blank .bible-page-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bible-blank-ornament { width: 26px; height: 26px; transform: rotate(45deg); opacity: 0.35; }
+
+/* ── Ribbon bookmark ────────────────────────────────────────────────────── */
+
+.bible-ribbon {
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 52%;
+  z-index: 20;
+  pointer-events: none;
+  background: linear-gradient(180deg, #e3b95e, #d7a748 40%, #a87f2c);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 11px), 0 100%);
+  filter: drop-shadow(0 7px 9px rgb(18 26 43 / 0.30));
+}
+.bible-stage.mode-spread .bible-ribbon { left: calc(50% + 2px); }
+.bible-stage.mode-single .bible-ribbon { right: 12px; }
+
+/* ── The closed cover ───────────────────────────────────────────────────── */
+
+.bible-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border-radius: 10px;
+  transform-origin: left center;
+  cursor: pointer;
+  border: 1px solid rgb(196 154 69 / 0.55);
+  background:
+    radial-gradient(140% 110% at 18% 0%, rgb(255 255 255 / 0.07), transparent 42%),
+    repeating-linear-gradient(115deg, rgb(255 255 255 / 0.016) 0 2px, transparent 2px 5px),
+    repeating-linear-gradient(25deg, rgb(0 0 0 / 0.05) 0 1px, transparent 1px 4px),
+    linear-gradient(135deg, var(--leather-a) 0%, var(--leather-b) 46%, var(--leather-c) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgb(0 0 0 / 0.30),
+    inset 0 2px 6px rgb(255 255 255 / 0.06),
+    0 24px 60px -18px rgb(10 16 30 / 0.55);
+  color: #f1ce83;
+  transition: transform 1.35s cubic-bezier(0.62, 0.04, 0.26, 1), opacity 0.5s ease 1.05s;
+}
+.bible-cover.opening { transform: rotateY(-152deg); opacity: 0.12; pointer-events: none; }
+
+.bible-cover .foil-frame {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgb(214 171 88 / 0.45);
+  border-radius: 6px;
+  pointer-events: none;
+}
+.bible-cover .foil-frame::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgb(214 171 88 / 0.22);
+  border-radius: 4px;
+}
+
+.bible-cover-title {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-size: clamp(1.8rem, 4.6vw, 2.7rem);
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em; /* optically re-center tracked caps */
+  background-image: linear-gradient(120deg, #f4d895 0%, #d7a748 48%, #b98b33 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 1px 0 rgb(0 0 0 / 0.55)) drop-shadow(0 -1px 0 rgb(255 235 180 / 0.12));
+}
+
+.bible-cover-sub {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+  color: rgb(241 206 131 / 0.72);
+}
+
+.bible-cover .open-hint {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #0f192c;
+  background: linear-gradient(120deg, #f1ce83, #d7a748);
+  padding: 10px 18px;
+  border-radius: 999px;
+  box-shadow: 0 10px 26px -10px rgb(215 167 72 / 0.65);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bible-cover:hover .open-hint { transform: translateY(-2px); box-shadow: 0 16px 32px -12px rgb(215 167 72 / 0.8); }
+
+/* ── Loading veil & error card over the book ────────────────────────────── */
+
+.bible-veil {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--paper) 62%, transparent);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.dark .bible-veil { background: color-mix(in oklab, #16223b 66%, transparent); }
+
+.bible-spinner {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: 2px solid rgb(196 154 69 / 0.25);
+  border-top-color: var(--gold-foil);
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.bible-veil-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+/* ── Skeleton lines ─────────────────────────────────────────────────────── */
+
+.bible-skel-line { border-radius: 4px; }
+
+/* ── Reduced motion: content swaps instantly ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .bible-sheet.turn-next,
+  .bible-sheet.turn-prev,
+  .bible-sheet.axis-x.turn-next,
+  .bible-sheet.axis-x.turn-prev { animation-duration: 0.01s; }
+  .bible-sheet-shade { animation: none; opacity: 0; }
+  .bible-cover { transition-duration: 0.01s; }
+  .bible-book.arrive { animation: none; }
+}
+
+/* ── Lite graphics mode ─────────────────────────────────────────────────── */
+/* Tablets and phones without GPU headroom: no 3D perspective, no layered
+   preserve-3d sheets, no blurred cast shadows. Page turns become a quiet
+   fade; the cover simply recedes. Chosen automatically for low-power
+   devices (and always available from the toolbar toggle). */
+.bible-stage.fx-lite {
+  perspective: none;
+}
+.bible-stage.fx-lite .bible-book {
+  transform-style: flat;
+  box-shadow: 0 16px 38px -20px rgb(15 25 44 / 0.45);
+}
+.bible-stage.fx-lite .bible-book::after { content: none; }
+.bible-stage.fx-lite .bible-edge { width: 6px; }
+.bible-stage.fx-lite .bible-slot { animation: ddog-lite-arrive 0.32s ease both; }
+@keyframes ddog-lite-arrive {
+  from { opacity: 0.28; }
+  to   { opacity: 1; }
+}
+.bible-stage.fx-lite .bible-sheet,
+.bible-stage.fx-lite .bible-sheet-shade { display: none; }
+.bible-stage.fx-lite .bible-cover {
+  transform-origin: 50% 50%;
+  transition: transform 0.45s ease, opacity 0.4s ease;
+  box-shadow:
+    inset 0 0 0 1px rgb(0 0 0 / 0.30),
+    0 14px 34px -16px rgb(10 16 30 / 0.5);
+}
+.bible-stage.fx-lite .bible-cover.opening {
+  transform: scale(0.98);
+  opacity: 0;
+}

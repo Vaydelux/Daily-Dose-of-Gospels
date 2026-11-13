@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Offline · Daily Dose of Gospels</title>
+<meta name="theme-color" content="#294875" />
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-align: center; padding: 24px;
+    background:
+      radial-gradient(60% 50% at 50% 30%, rgba(232,182,76,0.10), transparent 70%),
+      radial-gradient(90% 70% at 50% 110%, rgba(232,182,76,0.06), transparent 60%),
+      linear-gradient(180deg, #294875 0%, #1C2947 100%);
+    color: #F5EFDF;
+  }
+  .grain {
+    position: fixed; inset: 0; pointer-events: none; opacity: .5;
+    background-image:
+      linear-gradient(to right, rgba(245,239,223,0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(245,239,223,0.045) 1px, transparent 1px);
+    background-size: 36px 36px;
+    -webkit-mask-image: radial-gradient(ellipse 85% 65% at 50% 40%, black 25%, transparent 75%);
+            mask-image: radial-gradient(ellipse 85% 65% at 50% 40%, black 25%, transparent 75%);
+  }
+  main { position: relative; max-width: 34rem; }
+  .ring {
+    width: 96px; height: 96px; margin: 0 auto 28px;
+    display: flex; align-items: center; justify-content: center;
+    border: 1.5px dashed rgba(232,182,76,0.45); border-radius: 9999px;
+    animation: spin 46s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .ring svg { width: 42px; height: 42px; }
+  .eyebrow {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: .34em;
+    text-transform: uppercase; color: #E8B64C; margin-bottom: 14px;
+  }
+  h1 { font-size: clamp(28px, 6vw, 40px); font-weight: 700; letter-spacing: -.01em; line-height: 1.15; }
+  p.lead { margin: 16px auto 0; max-width: 26rem; font-size: 16px; line-height: 1.7; color: rgba(245,239,223,.82); }
+  blockquote { margin: 30px auto 0; max-width: 28rem; }
+  blockquote p { font-style: italic; font-size: 17px; line-height: 1.65; color: rgba(245,239,223,.92); }
+  blockquote footer {
+    margin-top: 10px; font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: .26em;
+    text-transform: uppercase; color: rgba(232,182,76,.9);
+  }
+  .actions { margin-top: 34px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  button, a.btn {
+    font-family: Verdana, Geneva, sans-serif; font-size: 13px; font-weight: 700;
+    letter-spacing: .06em; cursor: pointer; text-decoration: none;
+    border-radius: 9999px; padding: 12px 26px; transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+  }
+  button {
+    border: none; color: #33270F;
+    background: linear-gradient(180deg, #F1CE83, #D7A748);
+    box-shadow: 0 10px 30px -10px rgba(232,182,76,.55);
+  }
+  button:hover { transform: translateY(-1px); box-shadow: 0 14px 34px -10px rgba(232,182,76,.65); }
+  a.btn {
+    border: 1px solid rgba(245,239,223,.28); color: #F5EFDF; background: rgba(245,239,223,.06);
+  }
+  a.btn:hover { background: rgba(245,239,223,.14); }
+  .hint { margin-top: 26px; font-family: Verdana, Geneva, sans-serif; font-size: 12px; color: rgba(245,239,223,.55); }
+</style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <main>
+    <div class="ring" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E8B64C" stroke-width="1.8" stroke-linecap="round">
+        <path d="M12 3v18M7 9h10" />
+      </svg>
+    </div>
+    <p class="eyebrow">Offline · Still with you</p>
+    <h1>The connection rests,<br />the Word does not.</h1>
+    <p class="lead">You seem to be offline right now. Pages you have already visited remain available below, and everything else will return the moment you are back.</p>
+    <blockquote>
+      <p>&ldquo;And the light shineth in darkness; and the darkness comprehended it not.&rdquo;</p>
+      <footer>John 1:5 · KJV</footer>
+    </blockquote>
+    <div class="actions">
+      <button type="button" onclick="location.reload()">Try again</button>
+      <a class="btn" href="/">Go home</a>
+    </div>
+    <p class="hint">Previously visited pages are served from your device.</p>
+  </main>
+</body>
+</html>

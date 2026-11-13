@@ -1,0 +1,263 @@
+// Daily Dose of Gospels — Prisma schema (PostgreSQL for Vercel / Neon / Supabase)
+//
+// pgvector upgrade path (PostgreSQL only):
+//   1. Enable extension: CREATE EXTENSION IF NOT EXISTS vector;
+//   2. ALTER TABLE "PostEmbedding" ADD COLUMN embedding vector(1536);
+//   3. CREATE INDEX ON "PostEmbedding" USING hnsw (embedding vector_cosine_ops);
+//   4. Swap src/lib/embeddings.ts search() to raw SQL: ORDER BY embedding <=> $1 LIMIT n
+//   The app-code cosine fallback in src/lib/embeddings.ts requires no changes elsewhere.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Anonymous identity ────────────────────────────────────────────────────────
+// No emails, no names, no IPs — ever. The session token lives in an HTTP-only
+// cookie; the DB only knows a random id and a generated display name.
+
+model AnonSession {
+  id           String   @id @default(cuid()) // value stored in the cookie (hashed at rest? no — it IS random)
+  displayName  String // e.g. "Faithful Sparrow 4821" — never user-chosen
+  createdAt    DateTime @default(now())
+  lastSeenAt   DateTime @default(now())
+  conversations Conversation[]
+  posts        Post[]   @relation("PostAuthor")
+  comments     Comment[]
+  reactions    Reaction[]
+  reports      Report[]
+  memoryNotes  MemoryNote[]
+}
+
+// ─── Community forum ──────────────────────────────────────────────────────────
+
+model Post {
+  id             String   @id @default(cuid())
+  sessionId      String
+  category       String // TESTIMONY | PRAYER | STRUGGLES | ENCOURAGEMENT | REFLECTION
+  title          String
+  body           String // PII-scrubbed before save
+  crisisFlag     Boolean  @default(false) // self-harm/abuse detected → compassionate banner
+  hidden         Boolean  @default(false) // auto-hidden after N reports or admin action
+  reportCount    Int      @default(0)
+  sameSituation  Int      @default(0) // denormalized counters
+  encouraged     Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  author     AnonSession @relation("PostAuthor", fields: [sessionId], references: [id], onDelete: Cascade)
+  comments   Comment[]
+  reactions  Reaction[]
+  reports    Report[]
+  embedding  PostEmbedding?
+
+  @@index([category, hidden, createdAt(sort: Desc)])
+  @@index([createdAt(sort: Desc)])
+  @@index([sessionId])
+}
+
+model Comment {
+  id          String   @id @default(cuid())
+  postId      String
+  sessionId   String
+  body        String // PII-scrubbed
+  crisisFlag  Boolean  @default(false)
+  hidden      Boolean  @default(false)
+  reportCount Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  post     Post         @relation(fields: [postId], references: [id], onDelete: Cascade)
+  author   AnonSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  reports  Report[]
+
+  @@index([postId, hidden, createdAt])
+  @@index([sessionId])
+}
+
+model Reaction {
+  id        String   @id @default(cuid())
+  postId    String
+  sessionId String
+  type      String // SAME_SITUATION | ENCOURAGED
+  createdAt DateTime @default(now())
+
+  post Post         @relation(fields: [postId], references: [id], onDelete: Cascade)
+  anon AnonSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@unique([postId, sessionId, type]) // one reaction of each type per session
+  @@index([postId])
+}
+
+model Report {
+  id        String   @id @default(cuid())
+  postId    String?
+  commentId String?
+  sessionId String
+  reason    String
+  createdAt DateTime @default(now())
+
+  post Post?       @relation(fields: [postId], references: [id], onDelete: Cascade)
+  comment Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  anon AnonSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+
+  @@index([postId])
+  @@index([commentId])
+}
+
+// Embedding of the post body for the connection engine ("Others walking through
+// something similar"). Stored as JSON float array (portable); pgvector note above.
+model PostEmbedding {
+  id        String   @id @default(cuid())
+  postId    String   @unique
+  dim       Int
+  embedding String // JSON array of floats
+  model     String // "text-embedding-3-small" | "local-hash-v1"
+  createdAt DateTime @default(now())
+
+  post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@index([postId])
+}
+
+// ─── AI Counselor ─────────────────────────────────────────────────────────────
+
+model Conversation {
+  id        String   @id @default(cuid())
+  sessionId String
+  stage     String   @default("awaiting_prayer_choice") // awaiting_prayer_choice | counseling
+  summary   String? // rolling summary of older turns
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  anon     AnonSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@index([sessionId, updatedAt(sort: Desc)])
+}
+
+model Message {
+  id             String   @id @default(cuid())
+  conversationId String
+  role           String // user | assistant | system
+  content        String
+  offTopic       Boolean  @default(false) // flagged by topic guard (analytics)
+  cacheHit       Boolean  @default(false)
+  createdAt      DateTime @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt])
+}
+
+// Long-term continuity per anonymous id — user can clear it any time.
+model MemoryNote {
+  id        String   @id @default(cuid())
+  sessionId String   @unique
+  themes    String   @default("[]") // JSON string[]
+  concerns  String   @default("[]") // JSON string[]
+  prayed    Boolean  @default(false)
+  notes     String   @default("") // compact free-text context
+  updatedAt DateTime @updatedAt
+
+  anon AnonSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+}
+
+// Semantic response cache — token savings engine.
+model CachedResponse {
+  id             String   @id @default(cuid())
+  normalized     String // normalized question (PII-scrubbed)
+  dim            Int
+  embedding      String // JSON float array
+  model          String   @default("local-hash-v1") // which embedder produced the vector
+  response       String
+  language       String   @default("en") // en | tl | taglish | ...
+  themeTags      String   @default("[]") // JSON string[]
+  qualityScore   Float    @default(0) // aggregated thumbs up(1)/down(-1)
+  votes          Int      @default(0)
+  hits           Int      @default(0)
+  active         Boolean  @default(true) // false = evicted
+  createdAt      DateTime @default(now())
+  lastHitAt      DateTime @default(now())
+
+  @@index([language, active])
+  @@index([createdAt])
+}
+
+// ─── Daily content ────────────────────────────────────────────────────────────
+// NOTE: the DailyContent table was REMOVED. The Verse and Parable of the Day
+// are never AI-generated — they rotate deterministically through curated
+// Scripture banks (src/lib/daily.ts + src/lib/parables-bank.ts), so no storage
+// is needed. We do not invent scripture-like content.
+
+// ─── Music ────────────────────────────────────────────────────────────────────
+
+model Track {
+  id          String   @id @default(cuid())
+  title       String
+  description String   @default("")
+  lyrics      String   @default("")
+  scripture   String   @default("") // e.g. "Psalm 23:1-3"
+  audioUrl    String // /music/... or blob URL
+  coverUrl    String   @default("")
+  durationSec Int      @default(0)
+  playCount   Int      @default(0)
+  album       String   @default("Singles")
+  trackOrder  Int      @default(0)
+  published   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+
+  playlistItems PlaylistItem[]
+
+  @@index([published, trackOrder])
+}
+
+model Playlist {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String   @default("")
+  createdAt   DateTime @default(now())
+
+  items PlaylistItem[]
+
+  @@index([name])
+}
+
+model PlaylistItem {
+  id         String   @id @default(cuid())
+  playlistId String
+  trackId    String
+  position   Int      @default(0)
+
+  playlist Playlist @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  track    Track    @relation(fields: [trackId], references: [id], onDelete: Cascade)
+
+  @@unique([playlistId, trackId])
+  @@index([playlistId, position])
+}
+
+// ─── Observability ────────────────────────────────────────────────────────────
+
+model ModerationLog {
+  id         String   @id @default(cuid())
+  targetType String // post | comment | message
+  targetId   String
+  action     String // allow | flag | hide | crisis
+  scores     String   @default("{}") // JSON — OpenAI moderation categories + custom checks
+  reason     String   @default("")
+  createdAt  DateTime @default(now())
+
+  @@index([targetType, targetId])
+  @@index([createdAt])
+}
+
+// Aggregate counters for /admin (cache hit rate, tokens saved, off-topic rate).
+model UsageStat {
+  id        String   @id @default(cuid())
+  key       String   @unique // cache_hit | cache_miss | tokens_saved | llm_calls | off_topic | crisis_detected
+  value     Int      @default(0)
+  updatedAt DateTime @updatedAt
+}

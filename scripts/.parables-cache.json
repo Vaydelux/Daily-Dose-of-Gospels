@@ -1,0 +1,2382 @@
+{
+ "two-foundations": {
+  "reference": "Matthew 7:24-27",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 7,
+    "verse": 24,
+    "text": "“Everyone therefore who hears these words of mine, and does them, I will liken him to a wise man, who built his house on a rock."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 7,
+    "verse": 25,
+    "text": "The rain came down, the floods came, and the winds blew, and beat on that house; and it didn’t fall, for it was founded on the rock."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 7,
+    "verse": 26,
+    "text": "Everyone who hears these words of mine, and doesn’t do them will be like a foolish man, who built his house on the sand."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 7,
+    "verse": 27,
+    "text": "The rain came down, the floods came, and the winds blew, and beat on that house; and it fell—and great was its fall.”"
+   }
+  ],
+  "text": "“Everyone therefore who hears these words of mine, and does them, I will liken him to a wise man, who built his house on a rock. The rain came down, the floods came, and the winds blew, and beat on that house; and it didn’t fall, for it was founded on the rock. Everyone who hears these words of mine, and doesn’t do them will be like a foolish man, who built his house on the sand. The rain came down, the floods came, and the winds blew, and beat on that house; and it fell—and great was its fall.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "sower": {
+  "reference": "Matthew 13:3-9",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 3,
+    "text": "He spoke to them many things in parables, saying,\n“Behold, a farmer went out to sow."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 4,
+    "text": "As he sowed, some seeds fell by the roadside, and the birds came and devoured them."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 5,
+    "text": "Others fell on rocky ground, where they didn’t have much soil, and immediately they sprang up, because they had no depth of earth."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 6,
+    "text": "When the sun had risen, they were scorched. Because they had no root, they withered away."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 7,
+    "text": "Others fell among thorns. The thorns grew up and choked them."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 8,
+    "text": "Others fell on good soil, and yielded fruit: some one hundred times as much, some sixty, and some thirty."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 9,
+    "text": "He who has ears to hear, let him hear.”"
+   }
+  ],
+  "text": "He spoke to them many things in parables, saying,\n“Behold, a farmer went out to sow. As he sowed, some seeds fell by the roadside, and the birds came and devoured them. Others fell on rocky ground, where they didn’t have much soil, and immediately they sprang up, because they had no depth of earth. When the sun had risen, they were scorched. Because they had no root, they withered away. Others fell among thorns. The thorns grew up and choked them. Others fell on good soil, and yielded fruit: some one hundred times as much, some sixty, and some thirty. He who has ears to hear, let him hear.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "mustard-seed": {
+  "reference": "Matthew 13:31-32",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 31,
+    "text": "He set another parable before them, saying,\n“The Kingdom of Heaven is like a grain of mustard seed, which a man took, and sowed in his field;"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 32,
+    "text": "which indeed is smaller than all seeds. But when it is grown, it is greater than the herbs, and becomes a tree, so that the birds of the air come and lodge in its branches.”"
+   }
+  ],
+  "text": "He set another parable before them, saying,\n“The Kingdom of Heaven is like a grain of mustard seed, which a man took, and sowed in his field; which indeed is smaller than all seeds. But when it is grown, it is greater than the herbs, and becomes a tree, so that the birds of the air come and lodge in its branches.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "leaven": {
+  "reference": "Matthew 13:33",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 33,
+    "text": "He spoke another parable to them.\n“The Kingdom of Heaven is like yeast, which a woman took, and hid in three measures\nof meal, until it was all leavened.”"
+   }
+  ],
+  "text": "He spoke another parable to them.\n“The Kingdom of Heaven is like yeast, which a woman took, and hid in three measures\nof meal, until it was all leavened.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "hidden-treasure": {
+  "reference": "Matthew 13:44",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 44,
+    "text": "“Again, the Kingdom of Heaven is like treasure hidden in the field, which a man found, and hid. In his joy, he goes and sells all that he has, and buys that field."
+   }
+  ],
+  "text": "“Again, the Kingdom of Heaven is like treasure hidden in the field, which a man found, and hid. In his joy, he goes and sells all that he has, and buys that field.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "pearl": {
+  "reference": "Matthew 13:45-46",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 45,
+    "text": "“Again, the Kingdom of Heaven is like a man who is a merchant seeking fine pearls,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 46,
+    "text": "who having found one pearl of great price, he went and sold all that he had, and bought it."
+   }
+  ],
+  "text": "“Again, the Kingdom of Heaven is like a man who is a merchant seeking fine pearls, who having found one pearl of great price, he went and sold all that he had, and bought it.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "net": {
+  "reference": "Matthew 13:47-50",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 47,
+    "text": "“Again, the Kingdom of Heaven is like a dragnet, that was cast into the sea, and gathered some fish of every kind,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 48,
+    "text": "which, when it was filled, they drew up on the beach. They sat down, and gathered the good into containers, but the bad they threw away."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 49,
+    "text": "So will it be in the end of the world. The angels will come and separate the wicked from among the righteous,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 13,
+    "verse": 50,
+    "text": "and will cast them into the furnace of fire. There will be the weeping and the gnashing of teeth.”"
+   }
+  ],
+  "text": "“Again, the Kingdom of Heaven is like a dragnet, that was cast into the sea, and gathered some fish of every kind, which, when it was filled, they drew up on the beach. They sat down, and gathered the good into containers, but the bad they threw away. So will it be in the end of the world. The angels will come and separate the wicked from among the righteous, and will cast them into the furnace of fire. There will be the weeping and the gnashing of teeth.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "unmerciful-servant": {
+  "reference": "Matthew 18:21-35",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 21,
+    "text": "Then Peter came and said to him, “Lord, how often shall my brother sin against me, and I forgive him? Until seven times?”"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 22,
+    "text": "Jesus said to him,\n“I don’t tell you until seven times, but, until seventy times seven."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 23,
+    "text": "Therefore the Kingdom of Heaven is like a certain king, who wanted to reconcile accounts with his servants."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 24,
+    "text": "When he had begun to reconcile, one was brought to him who owed him ten thousand talents."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 25,
+    "text": "But because he couldn’t pay, his lord commanded him to be sold, with his wife, his children, and all that he had, and payment to be made."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 26,
+    "text": "The servant therefore fell down and knelt before him, saying, ‘Lord, have patience with me, and I will repay you all!’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 27,
+    "text": "The lord of that servant, being moved with compassion, released him, and forgave him the debt."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 28,
+    "text": "“But that servant went out, and found one of his fellow servants, who owed him one hundred denarii,\nand he grabbed him, and took him by the throat, saying, ‘Pay me what you owe!’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 29,
+    "text": "“So his fellow servant fell down at his feet and begged him, saying, ‘Have patience with me, and I will repay you!’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 30,
+    "text": "He would not, but went and cast him into prison, until he should pay back that which was due."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 31,
+    "text": "So when his fellow servants saw what was done, they were exceedingly sorry, and came and told their lord all that was done."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 32,
+    "text": "Then his lord called him in, and said to him, ‘You wicked servant! I forgave you all that debt, because you begged me."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 33,
+    "text": "Shouldn’t you also have had mercy on your fellow servant, even as I had mercy on you?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 34,
+    "text": "His lord was angry, and delivered him to the tormentors, until he should pay all that was due to him."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 18,
+    "verse": 35,
+    "text": "So my heavenly Father will also do to you, if you don’t each forgive your brother from your hearts for his misdeeds.”"
+   }
+  ],
+  "text": "Then Peter came and said to him, “Lord, how often shall my brother sin against me, and I forgive him? Until seven times?” Jesus said to him,\n“I don’t tell you until seven times, but, until seventy times seven. Therefore the Kingdom of Heaven is like a certain king, who wanted to reconcile accounts with his servants. When he had begun to reconcile, one was brought to him who owed him ten thousand talents. But because he couldn’t pay, his lord commanded him to be sold, with his wife, his children, and all that he had, and payment to be made. The servant therefore fell down and knelt before him, saying, ‘Lord, have patience with me, and I will repay you all!’ The lord of that servant, being moved with compassion, released him, and forgave him the debt. “But that servant went out, and found one of his fellow servants, who owed him one hundred denarii,\nand he grabbed him, and took him by the throat, saying, ‘Pay me what you owe!’ “So his fellow servant fell down at his feet and begged him, saying, ‘Have patience with me, and I will repay you!’ He would not, but went and cast him into prison, until he should pay back that which was due. So when his fellow servants saw what was done, they were exceedingly sorry, and came and told their lord all that was done. Then his lord called him in, and said to him, ‘You wicked servant! I forgave you all that debt, because you begged me. Shouldn’t you also have had mercy on your fellow servant, even as I had mercy on you?’ His lord was angry, and delivered him to the tormentors, until he should pay all that was due to him. So my heavenly Father will also do to you, if you don’t each forgive your brother from your hearts for his misdeeds.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "vineyard-workers": {
+  "reference": "Matthew 20:1-16",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 1,
+    "text": "“For the Kingdom of Heaven is like a man who was the master of a household, who went out early in the morning to hire laborers for his vineyard."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 2,
+    "text": "When he had agreed with the laborers for a denarius\na day, he sent them into his vineyard."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 3,
+    "text": "He went out about the third hour,\nand saw others standing idle in the marketplace."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 4,
+    "text": "He said to them, ‘You also go into the vineyard, and whatever is right I will give you.’ So they went their way."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 5,
+    "text": "Again he went out about the sixth and the ninth hour,\nand did likewise."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 6,
+    "text": "About the eleventh hour\nhe went out, and found others standing idle. He said to them, ‘Why do you stand here all day idle?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 7,
+    "text": "“They said to him, ‘Because no one has hired us.’\n“He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 8,
+    "text": "When evening had come, the lord of the vineyard said to his manager, ‘Call the laborers and pay them their wages, beginning from the last to the first.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 9,
+    "text": "“When those who were hired at about the eleventh hour came, they each received a denarius."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 10,
+    "text": "When the first came, they supposed that they would receive more; and they likewise each received a denarius."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 11,
+    "text": "When they received it, they murmured against the master of the household,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 12,
+    "text": "saying, ‘These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 13,
+    "text": "“But he answered one of them, ‘Friend, I am doing you no wrong. Didn’t you agree with me for a denarius?"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 14,
+    "text": "Take that which is yours, and go your way. It is my desire to give to this last just as much as to you."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 15,
+    "text": "Isn’t it lawful for me to do what I want to with what I own? Or is your eye evil, because I am good?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 20,
+    "verse": 16,
+    "text": "So the last will be first, and the first last. For many are called, but few are chosen.”"
+   }
+  ],
+  "text": "“For the Kingdom of Heaven is like a man who was the master of a household, who went out early in the morning to hire laborers for his vineyard. When he had agreed with the laborers for a denarius\na day, he sent them into his vineyard. He went out about the third hour,\nand saw others standing idle in the marketplace. He said to them, ‘You also go into the vineyard, and whatever is right I will give you.’ So they went their way. Again he went out about the sixth and the ninth hour,\nand did likewise. About the eleventh hour\nhe went out, and found others standing idle. He said to them, ‘Why do you stand here all day idle?’ “They said to him, ‘Because no one has hired us.’\n“He said to them, ‘You also go into the vineyard, and you will receive whatever is right.’ When evening had come, the lord of the vineyard said to his manager, ‘Call the laborers and pay them their wages, beginning from the last to the first.’ “When those who were hired at about the eleventh hour came, they each received a denarius. When the first came, they supposed that they would receive more; and they likewise each received a denarius. When they received it, they murmured against the master of the household, saying, ‘These last have spent one hour, and you have made them equal to us, who have borne the burden of the day and the scorching heat!’ “But he answered one of them, ‘Friend, I am doing you no wrong. Didn’t you agree with me for a denarius? Take that which is yours, and go your way. It is my desire to give to this last just as much as to you. Isn’t it lawful for me to do what I want to with what I own? Or is your eye evil, because I am good?’ So the last will be first, and the first last. For many are called, but few are chosen.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "two-sons": {
+  "reference": "Matthew 21:28-32",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 28,
+    "text": "But what do you think? A man had two sons, and he came to the first, and said, ‘Son, go work today in my vineyard.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 29,
+    "text": "He answered, ‘I will not,’ but afterward he changed his mind, and went."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 30,
+    "text": "He came to the second, and said the same thing. He answered, ‘I’ m going, sir,’ but he didn’t go."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 31,
+    "text": "Which of the two did the will of his father?”\nThey said to him, “The first.”\nJesus said to them,\n“Most certainly I tell you that the tax collectors and the prostitutes are entering into God’s Kingdom before you."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 32,
+    "text": "For John came to you in the way of righteousness, and you didn’t believe him, but the tax collectors and the prostitutes believed him. When you saw it, you didn’t even repent afterward, that you might believe him."
+   }
+  ],
+  "text": "But what do you think? A man had two sons, and he came to the first, and said, ‘Son, go work today in my vineyard.’ He answered, ‘I will not,’ but afterward he changed his mind, and went. He came to the second, and said the same thing. He answered, ‘I’ m going, sir,’ but he didn’t go. Which of the two did the will of his father?”\nThey said to him, “The first.”\nJesus said to them,\n“Most certainly I tell you that the tax collectors and the prostitutes are entering into God’s Kingdom before you. For John came to you in the way of righteousness, and you didn’t believe him, but the tax collectors and the prostitutes believed him. When you saw it, you didn’t even repent afterward, that you might believe him.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "wicked-tenants": {
+  "reference": "Matthew 21:33-44",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 33,
+    "text": "“Hear another parable. There was a man who was a master of a household, who planted a vineyard, set a hedge about it, dug a wine press in it, built a tower, leased it out to farmers, and went into another country."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 34,
+    "text": "When the season for the fruit came near, he sent his servants to the farmers, to receive his fruit."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 35,
+    "text": "The farmers took his servants, beat one, killed another, and stoned another."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 36,
+    "text": "Again, he sent other servants more than the first: and they treated them the same way."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 37,
+    "text": "But afterward he sent to them his son, saying, ‘They will respect my son.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 38,
+    "text": "But the farmers, when they saw the son, said among themselves, ‘This is the heir. Come, let’s kill him, and seize his inheritance.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 39,
+    "text": "So they took him, and threw him out of the vineyard, and killed him."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 40,
+    "text": "When therefore the lord of the vineyard comes, what will he do to those farmers?”"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 41,
+    "text": "They told him, “He will miserably destroy those miserable men, and will lease out the vineyard to other farmers, who will give him the fruit in its season.”"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 42,
+    "text": "Jesus said to them,\n“Did you never read in the Scriptures,\n\n‘The stone which the builders rejected,\nthe same was made the head of the corner.\nThis was from the Lord.\nIt is marvelous in our eyes?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 43,
+    "text": "“Therefore I tell you, God’s Kingdom will be taken away from you, and will be given to a nation producing its fruit."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 21,
+    "verse": 44,
+    "text": "He who falls on this stone will be broken to pieces, but on whomever it will fall, it will scatter him as dust.”"
+   }
+  ],
+  "text": "“Hear another parable. There was a man who was a master of a household, who planted a vineyard, set a hedge about it, dug a wine press in it, built a tower, leased it out to farmers, and went into another country. When the season for the fruit came near, he sent his servants to the farmers, to receive his fruit. The farmers took his servants, beat one, killed another, and stoned another. Again, he sent other servants more than the first: and they treated them the same way. But afterward he sent to them his son, saying, ‘They will respect my son.’ But the farmers, when they saw the son, said among themselves, ‘This is the heir. Come, let’s kill him, and seize his inheritance.’ So they took him, and threw him out of the vineyard, and killed him. When therefore the lord of the vineyard comes, what will he do to those farmers?” They told him, “He will miserably destroy those miserable men, and will lease out the vineyard to other farmers, who will give him the fruit in its season.” Jesus said to them,\n“Did you never read in the Scriptures,\n\n‘The stone which the builders rejected,\nthe same was made the head of the corner.\nThis was from the Lord.\nIt is marvelous in our eyes?’ “Therefore I tell you, God’s Kingdom will be taken away from you, and will be given to a nation producing its fruit. He who falls on this stone will be broken to pieces, but on whomever it will fall, it will scatter him as dust.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "wedding-banquet": {
+  "reference": "Matthew 22:1-14",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 1,
+    "text": "Jesus answered and spoke to them again in parables, saying,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 2,
+    "text": "“The Kingdom of Heaven is like a certain king, who made a marriage feast for his son,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 3,
+    "text": "and sent out his servants to call those who were invited to the marriage feast, but they would not come."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 4,
+    "text": "Again he sent out other servants, saying, ‘Tell those who are invited, “Behold, I have prepared my dinner. My cattle and my fatlings are killed, and all things are ready. Come to the marriage feast!”’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 5,
+    "text": "But they made light of it, and went their ways, one to his own farm, another to his merchandise,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 6,
+    "text": "and the rest grabbed his servants, and treated them shamefully, and killed them."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 7,
+    "text": "When the king heard that, he was angry, and sent his armies, destroyed those murderers, and burned their city."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 8,
+    "text": "“Then he said to his servants, ‘The wedding is ready, but those who were invited weren’t worthy."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 9,
+    "text": "Go therefore to the intersections of the highways, and as many as you may find, invite to the marriage feast.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 10,
+    "text": "Those servants went out into the highways, and gathered together as many as they found, both bad and good. The wedding was filled with guests."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 11,
+    "text": "But when the king came in to see the guests, he saw there a man who didn’t have on wedding clothing,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 12,
+    "text": "and he said to him, ‘Friend, how did you come in here not wearing wedding clothing?’ He was speechless."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 13,
+    "text": "Then the king said to the servants, ‘Bind him hand and foot, take him away, and throw him into the outer darkness. That is where the weeping and grinding of teeth will be.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 22,
+    "verse": 14,
+    "text": "For many are called, but few chosen.”"
+   }
+  ],
+  "text": "Jesus answered and spoke to them again in parables, saying, “The Kingdom of Heaven is like a certain king, who made a marriage feast for his son, and sent out his servants to call those who were invited to the marriage feast, but they would not come. Again he sent out other servants, saying, ‘Tell those who are invited, “Behold, I have prepared my dinner. My cattle and my fatlings are killed, and all things are ready. Come to the marriage feast!”’ But they made light of it, and went their ways, one to his own farm, another to his merchandise, and the rest grabbed his servants, and treated them shamefully, and killed them. When the king heard that, he was angry, and sent his armies, destroyed those murderers, and burned their city. “Then he said to his servants, ‘The wedding is ready, but those who were invited weren’t worthy. Go therefore to the intersections of the highways, and as many as you may find, invite to the marriage feast.’ Those servants went out into the highways, and gathered together as many as they found, both bad and good. The wedding was filled with guests. But when the king came in to see the guests, he saw there a man who didn’t have on wedding clothing, and he said to him, ‘Friend, how did you come in here not wearing wedding clothing?’ He was speechless. Then the king said to the servants, ‘Bind him hand and foot, take him away, and throw him into the outer darkness. That is where the weeping and grinding of teeth will be.’ For many are called, but few chosen.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "ten-virgins": {
+  "reference": "Matthew 25:1-13",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 1,
+    "text": "“Then the Kingdom of Heaven will be like ten virgins, who took their lamps, and went out to meet the bridegroom."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 2,
+    "text": "Five of them were foolish, and five were wise."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 3,
+    "text": "Those who were foolish, when they took their lamps, took no oil with them,"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 4,
+    "text": "but the wise took oil in their vessels with their lamps."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 5,
+    "text": "Now while the bridegroom delayed, they all slumbered and slept."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 6,
+    "text": "But at midnight there was a cry, ‘Behold! The bridegroom is coming! Come out to meet him!’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 7,
+    "text": "Then all those virgins arose, and trimmed their lamps."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 8,
+    "text": "The foolish said to the wise, ‘Give us some of your oil, for our lamps are going out.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 9,
+    "text": "But the wise answered, saying, ‘What if there isn’t enough for us and you? You go rather to those who sell, and buy for yourselves.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 10,
+    "text": "While they went away to buy, the bridegroom came, and those who were ready went in with him to the marriage feast, and the door was shut."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 11,
+    "text": "Afterward the other virgins also came, saying, ‘Lord, Lord, open to us.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 12,
+    "text": "But he answered, ‘Most certainly I tell you, I don’t know you.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 13,
+    "text": "Watch therefore, for you don’t know the day nor the hour in which the Son of Man is coming."
+   }
+  ],
+  "text": "“Then the Kingdom of Heaven will be like ten virgins, who took their lamps, and went out to meet the bridegroom. Five of them were foolish, and five were wise. Those who were foolish, when they took their lamps, took no oil with them, but the wise took oil in their vessels with their lamps. Now while the bridegroom delayed, they all slumbered and slept. But at midnight there was a cry, ‘Behold! The bridegroom is coming! Come out to meet him!’ Then all those virgins arose, and trimmed their lamps. The foolish said to the wise, ‘Give us some of your oil, for our lamps are going out.’ But the wise answered, saying, ‘What if there isn’t enough for us and you? You go rather to those who sell, and buy for yourselves.’ While they went away to buy, the bridegroom came, and those who were ready went in with him to the marriage feast, and the door was shut. Afterward the other virgins also came, saying, ‘Lord, Lord, open to us.’ But he answered, ‘Most certainly I tell you, I don’t know you.’ Watch therefore, for you don’t know the day nor the hour in which the Son of Man is coming.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "talents": {
+  "reference": "Matthew 25:14-30",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 14,
+    "text": "“For it is like a man, going into another country, who called his own servants, and entrusted his goods to them."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 15,
+    "text": "To one he gave five talents, to another two, to another one; to each according to his own ability. Then he went on his journey."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 16,
+    "text": "Immediately he who received the five talents went and traded with them, and made another five talents."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 17,
+    "text": "In the same way, he also who got the two gained another two."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 18,
+    "text": "But he who received the one talent went away and dug in the earth, and hid his lord’s money."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 19,
+    "text": "“Now after a long time the lord of those servants came, and reconciled accounts with them."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 20,
+    "text": "He who received the five talents came and brought another five talents, saying, ‘Lord, you delivered to me five talents. Behold, I have gained another five talents besides them.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 21,
+    "text": "“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 22,
+    "text": "“He also who got the two talents came and said, ‘Lord, you delivered to me two talents. Behold, I have gained another two talents besides them.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 23,
+    "text": "“His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 24,
+    "text": "“He also who had received the one talent came and said, ‘Lord, I knew you that you are a hard man, reaping where you did not sow, and gathering where you did not scatter."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 25,
+    "text": "I was afraid, and went away and hid your talent in the earth. Behold, you have what is yours.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 26,
+    "text": "“But his lord answered him, ‘You wicked and slothful servant. You knew that I reap where I didn’t sow, and gather where I didn’t scatter."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 27,
+    "text": "You ought therefore to have deposited my money with the bankers, and at my coming I should have received back my own with interest."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 28,
+    "text": "Take away therefore the talent from him, and give it to him who has the ten talents."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 29,
+    "text": "For to everyone who has will be given, and he will have abundance, but from him who doesn’t have, even that which he has will be taken away."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 30,
+    "text": "Throw out the unprofitable servant into the outer darkness, where there will be weeping and gnashing of teeth.’"
+   }
+  ],
+  "text": "“For it is like a man, going into another country, who called his own servants, and entrusted his goods to them. To one he gave five talents, to another two, to another one; to each according to his own ability. Then he went on his journey. Immediately he who received the five talents went and traded with them, and made another five talents. In the same way, he also who got the two gained another two. But he who received the one talent went away and dug in the earth, and hid his lord’s money. “Now after a long time the lord of those servants came, and reconciled accounts with them. He who received the five talents came and brought another five talents, saying, ‘Lord, you delivered to me five talents. Behold, I have gained another five talents besides them.’ “His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’ “He also who got the two talents came and said, ‘Lord, you delivered to me two talents. Behold, I have gained another two talents besides them.’ “His lord said to him, ‘Well done, good and faithful servant. You have been faithful over a few things, I will set you over many things. Enter into the joy of your lord.’ “He also who had received the one talent came and said, ‘Lord, I knew you that you are a hard man, reaping where you did not sow, and gathering where you did not scatter. I was afraid, and went away and hid your talent in the earth. Behold, you have what is yours.’ “But his lord answered him, ‘You wicked and slothful servant. You knew that I reap where I didn’t sow, and gather where I didn’t scatter. You ought therefore to have deposited my money with the bankers, and at my coming I should have received back my own with interest. Take away therefore the talent from him, and give it to him who has the ten talents. For to everyone who has will be given, and he will have abundance, but from him who doesn’t have, even that which he has will be taken away. Throw out the unprofitable servant into the outer darkness, where there will be weeping and gnashing of teeth.’",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "sheep-and-goats": {
+  "reference": "Matthew 25:31-46",
+  "verses": [
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 31,
+    "text": "“But when the Son of Man comes in his glory, and all the holy angels with him, then he will sit on the throne of his glory."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 32,
+    "text": "Before him all the nations will be gathered, and he will separate them one from another, as a shepherd separates the sheep from the goats."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 33,
+    "text": "He will set the sheep on his right hand, but the goats on the left."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 34,
+    "text": "Then the King will tell those on his right hand, ‘Come, blessed of my Father, inherit the Kingdom prepared for you from the foundation of the world;"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 35,
+    "text": "for I was hungry, and you gave me food to eat. I was thirsty, and you gave me drink. I was a stranger, and you took me in."
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 36,
+    "text": "I was naked, and you clothed me. I was sick, and you visited me. I was in prison, and you came to me.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 37,
+    "text": "“Then the righteous will answer him, saying, ‘Lord, when did we see you hungry, and feed you; or thirsty, and give you a drink?"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 38,
+    "text": "When did we see you as a stranger, and take you in; or naked, and clothe you?"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 39,
+    "text": "When did we see you sick, or in prison, and come to you?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 40,
+    "text": "“The King will answer them, ‘Most certainly I tell you, because you did it to one of the least of these my brothers,\n you did it to me.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 41,
+    "text": "Then he will say also to those on the left hand, ‘Depart from me, you cursed, into the eternal fire which is prepared for the devil and his angels;"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 42,
+    "text": "for I was hungry, and you didn’t give me food to eat; I was thirsty, and you gave me no drink;"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 43,
+    "text": "I was a stranger, and you didn’t take me in; naked, and you didn’t clothe me; sick, and in prison, and you didn’t visit me.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 44,
+    "text": "“Then they will also answer, saying, ‘Lord, when did we see you hungry, or thirsty, or a stranger, or naked, or sick, or in prison, and didn’t help you?’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 45,
+    "text": "“Then he will answer them, saying, ‘Most certainly I tell you, because you didn’t do it to one of the least of these, you didn’t do it to me.’"
+   },
+   {
+    "book_id": "MAT",
+    "book_name": "Matthew",
+    "chapter": 25,
+    "verse": 46,
+    "text": "These will go away into eternal punishment, but the righteous into eternal life.”"
+   }
+  ],
+  "text": "“But when the Son of Man comes in his glory, and all the holy angels with him, then he will sit on the throne of his glory. Before him all the nations will be gathered, and he will separate them one from another, as a shepherd separates the sheep from the goats. He will set the sheep on his right hand, but the goats on the left. Then the King will tell those on his right hand, ‘Come, blessed of my Father, inherit the Kingdom prepared for you from the foundation of the world; for I was hungry, and you gave me food to eat. I was thirsty, and you gave me drink. I was a stranger, and you took me in. I was naked, and you clothed me. I was sick, and you visited me. I was in prison, and you came to me.’ “Then the righteous will answer him, saying, ‘Lord, when did we see you hungry, and feed you; or thirsty, and give you a drink? When did we see you as a stranger, and take you in; or naked, and clothe you? When did we see you sick, or in prison, and come to you?’ “The King will answer them, ‘Most certainly I tell you, because you did it to one of the least of these my brothers,\n you did it to me.’ Then he will say also to those on the left hand, ‘Depart from me, you cursed, into the eternal fire which is prepared for the devil and his angels; for I was hungry, and you didn’t give me food to eat; I was thirsty, and you gave me no drink; I was a stranger, and you didn’t take me in; naked, and you didn’t clothe me; sick, and in prison, and you didn’t visit me.’ “Then they will also answer, saying, ‘Lord, when did we see you hungry, or thirsty, or a stranger, or naked, or sick, or in prison, and didn’t help you?’ “Then he will answer them, saying, ‘Most certainly I tell you, because you didn’t do it to one of the least of these, you didn’t do it to me.’ These will go away into eternal punishment, but the righteous into eternal life.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "growing-seed": {
+  "reference": "Mark 4:26-29",
+  "verses": [
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 26,
+    "text": "He said,\n“God’s Kingdom is as if a man should cast seed on the earth,"
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 27,
+    "text": "and should sleep and rise night and day, and the seed should spring up and grow, though he doesn’t know how."
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 28,
+    "text": "For the earth bears fruit: first the blade, then the ear, then the full grain in the ear."
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 29,
+    "text": "But when the fruit is ripe, immediately he puts in the sickle, because the harvest has come.”"
+   }
+  ],
+  "text": "He said,\n“God’s Kingdom is as if a man should cast seed on the earth, and should sleep and rise night and day, and the seed should spring up and grow, though he doesn’t know how. For the earth bears fruit: first the blade, then the ear, then the full grain in the ear. But when the fruit is ripe, immediately he puts in the sickle, because the harvest has come.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "lamp-stand": {
+  "reference": "Mark 4:21-25",
+  "verses": [
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 21,
+    "text": "He said to them,\n“Is the lamp brought to be put under a basket\n\nor under a bed? Isn’t it put on a stand?"
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 22,
+    "text": "For there is nothing hidden, except that it should be made known; neither was anything made secret, but that it should come to light."
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 23,
+    "text": "If any man has ears to hear, let him hear.”"
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 24,
+    "text": "He said to them,\n“Take heed what you hear. With whatever measure you measure, it will be measured to you, and more will be given to you who hear."
+   },
+   {
+    "book_id": "MRK",
+    "book_name": "Mark",
+    "chapter": 4,
+    "verse": 25,
+    "text": "For whoever has, to him will more be given, and he who doesn’t have, even that which he has will be taken away from him.”"
+   }
+  ],
+  "text": "He said to them,\n“Is the lamp brought to be put under a basket\n\nor under a bed? Isn’t it put on a stand? For there is nothing hidden, except that it should be made known; neither was anything made secret, but that it should come to light. If any man has ears to hear, let him hear.” He said to them,\n“Take heed what you hear. With whatever measure you measure, it will be measured to you, and more will be given to you who hear. For whoever has, to him will more be given, and he who doesn’t have, even that which he has will be taken away from him.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "two-debtors": {
+  "reference": "Luke 7:41-43",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 7,
+    "verse": 41,
+    "text": "“A certain lender had two debtors. The one owed five hundred denarii, and the other fifty."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 7,
+    "verse": 42,
+    "text": "When they couldn’t pay, he forgave them both. Which of them therefore will love him most?”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 7,
+    "verse": 43,
+    "text": "Simon answered, “He, I suppose, to whom he forgave the most.”\nHe said to him,\n“You have judged correctly.”"
+   }
+  ],
+  "text": "“A certain lender had two debtors. The one owed five hundred denarii, and the other fifty. When they couldn’t pay, he forgave them both. Which of them therefore will love him most?” Simon answered, “He, I suppose, to whom he forgave the most.”\nHe said to him,\n“You have judged correctly.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "good-samaritan": {
+  "reference": "Luke 10:25-37",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 25,
+    "text": "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 26,
+    "text": "He said to him,\n“What is written in the law? How do you read it?”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 27,
+    "text": "He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 28,
+    "text": "He said to him,\n“You have answered correctly. Do this, and you will live.”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 29,
+    "text": "But he, desiring to justify himself, asked Jesus, “Who is my neighbor?”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 30,
+    "text": "Jesus answered,\n“A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 31,
+    "text": "By chance a certain priest was going down that way. When he saw him, he passed by on the other side."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 32,
+    "text": "In the same way a Levite also, when he came to the place, and saw him, passed by on the other side."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 33,
+    "text": "But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 34,
+    "text": "came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 35,
+    "text": "On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 36,
+    "text": "Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 10,
+    "verse": 37,
+    "text": "He said, “He who showed mercy on him.”\nThen Jesus said to him,\n“Go and do likewise.”"
+   }
+  ],
+  "text": "Behold, a certain lawyer stood up and tested him, saying, “Teacher, what shall I do to inherit eternal life?” He said to him,\n“What is written in the law? How do you read it?” He answered, “You shall love the Lord your God with all your heart, with all your soul, with all your strength, and with all your mind; and your neighbor as yourself.” He said to him,\n“You have answered correctly. Do this, and you will live.” But he, desiring to justify himself, asked Jesus, “Who is my neighbor?” Jesus answered,\n“A certain man was going down from Jerusalem to Jericho, and he fell among robbers, who both stripped him and beat him, and departed, leaving him half dead. By chance a certain priest was going down that way. When he saw him, he passed by on the other side. In the same way a Levite also, when he came to the place, and saw him, passed by on the other side. But a certain Samaritan, as he traveled, came where he was. When he saw him, he was moved with compassion, came to him, and bound up his wounds, pouring on oil and wine. He set him on his own animal, and brought him to an inn, and took care of him. On the next day, when he departed, he took out two denarii, and gave them to the host, and said to him, ‘Take care of him. Whatever you spend beyond that, I will repay you when I return.’ Now which of these three do you think seemed to be a neighbor to him who fell among the robbers?” He said, “He who showed mercy on him.”\nThen Jesus said to him,\n“Go and do likewise.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "friend-at-midnight": {
+  "reference": "Luke 11:5-13",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 5,
+    "text": "He said to them,\n“Which of you, if you go to a friend at midnight, and tell him, ‘Friend, lend me three loaves of bread,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 6,
+    "text": "for a friend of mine has come to me from a journey, and I have nothing to set before him,’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 7,
+    "text": "and he from within will answer and say, ‘Don’t bother me. The door is now shut, and my children are with me in bed. I can’t get up and give it to you’?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 8,
+    "text": "I tell you, although he will not rise and give it to him because he is his friend, yet because of his persistence, he will get up and give him as many as he needs."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 9,
+    "text": "“I tell you, keep asking, and it will be given you. Keep seeking, and you will find. Keep knocking, and it will be opened to you."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 10,
+    "text": "For everyone who asks receives. He who seeks finds. To him who knocks it will be opened."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 11,
+    "text": "“Which of you fathers, if your son asks for bread, will give him a stone? Or if he asks for a fish, he won’t give him a snake instead of a fish, will he?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 12,
+    "text": "Or if he asks for an egg, he won’t give him a scorpion, will he?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 11,
+    "verse": 13,
+    "text": "If you then, being evil, know how to give good gifts to your children, how much more will your heavenly Father give the Holy Spirit to those who ask him?”"
+   }
+  ],
+  "text": "He said to them,\n“Which of you, if you go to a friend at midnight, and tell him, ‘Friend, lend me three loaves of bread, for a friend of mine has come to me from a journey, and I have nothing to set before him,’ and he from within will answer and say, ‘Don’t bother me. The door is now shut, and my children are with me in bed. I can’t get up and give it to you’? I tell you, although he will not rise and give it to him because he is his friend, yet because of his persistence, he will get up and give him as many as he needs. “I tell you, keep asking, and it will be given you. Keep seeking, and you will find. Keep knocking, and it will be opened to you. For everyone who asks receives. He who seeks finds. To him who knocks it will be opened. “Which of you fathers, if your son asks for bread, will give him a stone? Or if he asks for a fish, he won’t give him a snake instead of a fish, will he? Or if he asks for an egg, he won’t give him a scorpion, will he? If you then, being evil, know how to give good gifts to your children, how much more will your heavenly Father give the Holy Spirit to those who ask him?”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "rich-fool": {
+  "reference": "Luke 12:16-21",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 16,
+    "text": "He spoke a parable to them, saying,\n“The ground of a certain rich man produced abundantly."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 17,
+    "text": "He reasoned within himself, saying, ‘What will I do, because I don’t have room to store my crops?’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 18,
+    "text": "He said, ‘This is what I will do. I will pull down my barns, and build bigger ones, and there I will store all my grain and my goods."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 19,
+    "text": "I will tell my soul, “Soul, you have many goods laid up for many years. Take your ease, eat, drink, be merry.”’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 20,
+    "text": "“But God said to him, ‘You foolish one, tonight your soul is required of you. The things which you have prepared—whose will they be?’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 21,
+    "text": "So is he who lays up treasure for himself, and is not rich toward God.”"
+   }
+  ],
+  "text": "He spoke a parable to them, saying,\n“The ground of a certain rich man produced abundantly. He reasoned within himself, saying, ‘What will I do, because I don’t have room to store my crops?’ He said, ‘This is what I will do. I will pull down my barns, and build bigger ones, and there I will store all my grain and my goods. I will tell my soul, “Soul, you have many goods laid up for many years. Take your ease, eat, drink, be merry.”’ “But God said to him, ‘You foolish one, tonight your soul is required of you. The things which you have prepared—whose will they be?’ So is he who lays up treasure for himself, and is not rich toward God.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "watchful-servants": {
+  "reference": "Luke 12:35-40",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 35,
+    "text": "“Let your waist be dressed and your lamps burning."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 36,
+    "text": "Be like men watching for their lord, when he returns from the marriage feast; that, when he comes and knocks, they may immediately open to him."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 37,
+    "text": "Blessed are those servants, whom the lord will find watching when he comes. Most certainly I tell you, that he will dress himself, and make them recline, and will come and serve them."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 38,
+    "text": "They will be blessed if he comes in the second or third watch, and finds them so."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 39,
+    "text": "But know this, that if the master of the house had known in what hour the thief was coming, he would have watched, and not allowed his house to be broken into."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 12,
+    "verse": 40,
+    "text": "Therefore be ready also, for the Son of Man is coming in an hour that you don’t expect him.”"
+   }
+  ],
+  "text": "“Let your waist be dressed and your lamps burning. Be like men watching for their lord, when he returns from the marriage feast; that, when he comes and knocks, they may immediately open to him. Blessed are those servants, whom the lord will find watching when he comes. Most certainly I tell you, that he will dress himself, and make them recline, and will come and serve them. They will be blessed if he comes in the second or third watch, and finds them so. But know this, that if the master of the house had known in what hour the thief was coming, he would have watched, and not allowed his house to be broken into. Therefore be ready also, for the Son of Man is coming in an hour that you don’t expect him.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "barren-fig-tree": {
+  "reference": "Luke 13:6-9",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 13,
+    "verse": 6,
+    "text": "He spoke this parable.\n“A certain man had a fig tree planted in his vineyard, and he came seeking fruit on it, and found none."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 13,
+    "verse": 7,
+    "text": "He said to the vine dresser, ‘Behold, these three years I have come looking for fruit on this fig tree, and found none. Cut it down. Why does it waste the soil?’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 13,
+    "verse": 8,
+    "text": "He answered, ‘Lord, leave it alone this year also, until I dig around it, and fertilize it."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 13,
+    "verse": 9,
+    "text": "If it bears fruit, fine; but if not, after that, you can cut it down.’”"
+   }
+  ],
+  "text": "He spoke this parable.\n“A certain man had a fig tree planted in his vineyard, and he came seeking fruit on it, and found none. He said to the vine dresser, ‘Behold, these three years I have come looking for fruit on this fig tree, and found none. Cut it down. Why does it waste the soil?’ He answered, ‘Lord, leave it alone this year also, until I dig around it, and fertilize it. If it bears fruit, fine; but if not, after that, you can cut it down.’”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "great-banquet": {
+  "reference": "Luke 14:15-24",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 15,
+    "text": "When one of those who sat at the table with him heard these things, he said to him, “Blessed is he who will feast in God’s Kingdom!”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 16,
+    "text": "But he said to him,\n“A certain man made a great supper, and he invited many people."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 17,
+    "text": "He sent out his servant at supper time to tell those who were invited, ‘Come, for everything is ready now.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 18,
+    "text": "They all as one began to make excuses.\n“The first said to him, ‘I have bought a field, and I must go and see it. Please have me excused.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 19,
+    "text": "“Another said, ‘I have bought five yoke of oxen, and I must go try them out. Please have me excused.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 20,
+    "text": "“Another said, ‘I have married a wife, and therefore I can’t come.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 21,
+    "text": "“That servant came, and told his lord these things. Then the master of the house, being angry, said to his servant, ‘Go out quickly into the streets and lanes of the city, and bring in the poor, maimed, blind, and lame.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 22,
+    "text": "“The servant said, ‘Lord, it is done as you commanded, and there is still room.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 23,
+    "text": "“The lord said to the servant, ‘Go out into the highways and hedges, and compel them to come in, that my house may be filled."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 24,
+    "text": "For I tell you that none of those men who were invited will taste of my supper.’”"
+   }
+  ],
+  "text": "When one of those who sat at the table with him heard these things, he said to him, “Blessed is he who will feast in God’s Kingdom!” But he said to him,\n“A certain man made a great supper, and he invited many people. He sent out his servant at supper time to tell those who were invited, ‘Come, for everything is ready now.’ They all as one began to make excuses.\n“The first said to him, ‘I have bought a field, and I must go and see it. Please have me excused.’ “Another said, ‘I have bought five yoke of oxen, and I must go try them out. Please have me excused.’ “Another said, ‘I have married a wife, and therefore I can’t come.’ “That servant came, and told his lord these things. Then the master of the house, being angry, said to his servant, ‘Go out quickly into the streets and lanes of the city, and bring in the poor, maimed, blind, and lame.’ “The servant said, ‘Lord, it is done as you commanded, and there is still room.’ “The lord said to the servant, ‘Go out into the highways and hedges, and compel them to come in, that my house may be filled. For I tell you that none of those men who were invited will taste of my supper.’”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "counting-cost": {
+  "reference": "Luke 14:28-33",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 28,
+    "text": "For which of you, desiring to build a tower, doesn’t first sit down and count the cost, to see if he has enough to complete it?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 29,
+    "text": "Or perhaps, when he has laid a foundation, and is not able to finish, everyone who sees begins to mock him,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 30,
+    "text": "saying, ‘This man began to build, and wasn’t able to finish.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 31,
+    "text": "Or what king, as he goes to encounter another king in war, will not sit down first and consider whether he is able with ten thousand to meet him who comes against him with twenty thousand?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 32,
+    "text": "Or else, while the other is yet a great way off, he sends an envoy, and asks for conditions of peace."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 14,
+    "verse": 33,
+    "text": "So therefore whoever of you who doesn’t renounce all that he has, he can’t be my disciple."
+   }
+  ],
+  "text": "For which of you, desiring to build a tower, doesn’t first sit down and count the cost, to see if he has enough to complete it? Or perhaps, when he has laid a foundation, and is not able to finish, everyone who sees begins to mock him, saying, ‘This man began to build, and wasn’t able to finish.’ Or what king, as he goes to encounter another king in war, will not sit down first and consider whether he is able with ten thousand to meet him who comes against him with twenty thousand? Or else, while the other is yet a great way off, he sends an envoy, and asks for conditions of peace. So therefore whoever of you who doesn’t renounce all that he has, he can’t be my disciple.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "lost-sheep": {
+  "reference": "Luke 15:3-7",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 3,
+    "text": "He told them this parable."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 4,
+    "text": "“Which of you men, if you had one hundred sheep, and lost one of them, wouldn’t leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 5,
+    "text": "When he has found it, he carries it on his shoulders, rejoicing."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 6,
+    "text": "When he comes home, he calls together his friends and his neighbors, saying to them, ‘Rejoice with me, for I have found my sheep which was lost!’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 7,
+    "text": "I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance."
+   }
+  ],
+  "text": "He told them this parable. “Which of you men, if you had one hundred sheep, and lost one of them, wouldn’t leave the ninety-nine in the wilderness, and go after the one that was lost, until he found it? When he has found it, he carries it on his shoulders, rejoicing. When he comes home, he calls together his friends and his neighbors, saying to them, ‘Rejoice with me, for I have found my sheep which was lost!’ I tell you that even so there will be more joy in heaven over one sinner who repents, than over ninety-nine righteous people who need no repentance.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "lost-coin": {
+  "reference": "Luke 15:8-10",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 8,
+    "text": "Or what woman, if she had ten drachma\ncoins, if she lost one drachma coin, wouldn’t light a lamp, sweep the house, and seek diligently until she found it?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 9,
+    "text": "When she has found it, she calls together her friends and neighbors, saying, ‘Rejoice with me, for I have found the drachma which I had lost.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 10,
+    "text": "Even so, I tell you, there is joy in the presence of the angels of God over one sinner repenting.”"
+   }
+  ],
+  "text": "Or what woman, if she had ten drachma\ncoins, if she lost one drachma coin, wouldn’t light a lamp, sweep the house, and seek diligently until she found it? When she has found it, she calls together her friends and neighbors, saying, ‘Rejoice with me, for I have found the drachma which I had lost.’ Even so, I tell you, there is joy in the presence of the angels of God over one sinner repenting.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "lost-son": {
+  "reference": "Luke 15:11-32",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 11,
+    "text": "He said,\n“A certain man had two sons."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 12,
+    "text": "The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 13,
+    "text": "Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 14,
+    "text": "When he had spent all of it, there arose a severe famine in that country, and he began to be in need."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 15,
+    "text": "He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 16,
+    "text": "He wanted to fill his belly with the husks that the pigs ate, but no one gave him any."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 17,
+    "text": "But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger!"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 18,
+    "text": "I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 19,
+    "text": "I am no more worthy to be called your son. Make me as one of your hired servants.”’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 20,
+    "text": "“He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 21,
+    "text": "The son said to him, ‘Father, I have sinned against heaven, and in your sight. I am no longer worthy to be called your son.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 22,
+    "text": "“But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and shoes on his feet."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 23,
+    "text": "Bring the fattened calf, kill it, and let us eat, and celebrate;"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 24,
+    "text": "for this, my son, was dead, and is alive again. He was lost, and is found.’ They began to celebrate."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 25,
+    "text": "“Now his elder son was in the field. As he came near to the house, he heard music and dancing."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 26,
+    "text": "He called one of the servants to him, and asked what was going on."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 27,
+    "text": "He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 28,
+    "text": "But he was angry, and would not go in. Therefore his father came out, and begged him."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 29,
+    "text": "But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 30,
+    "text": "But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 31,
+    "text": "“He said to him, ‘Son, you are always with me, and all that is mine is yours."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 15,
+    "verse": 32,
+    "text": "But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”"
+   }
+  ],
+  "text": "He said,\n“A certain man had two sons. The younger of them said to his father, ‘Father, give me my share of your property.’ He divided his livelihood between them. Not many days after, the younger son gathered all of this together and traveled into a far country. There he wasted his property with riotous living. When he had spent all of it, there arose a severe famine in that country, and he began to be in need. He went and joined himself to one of the citizens of that country, and he sent him into his fields to feed pigs. He wanted to fill his belly with the husks that the pigs ate, but no one gave him any. But when he came to himself he said, ‘How many hired servants of my father’s have bread enough to spare, and I’m dying with hunger! I will get up and go to my father, and will tell him, “Father, I have sinned against heaven, and in your sight. I am no more worthy to be called your son. Make me as one of your hired servants.”’ “He arose, and came to his father. But while he was still far off, his father saw him, and was moved with compassion, and ran, and fell on his neck, and kissed him. The son said to him, ‘Father, I have sinned against heaven, and in your sight. I am no longer worthy to be called your son.’ “But the father said to his servants, ‘Bring out the best robe, and put it on him. Put a ring on his hand, and shoes on his feet. Bring the fattened calf, kill it, and let us eat, and celebrate; for this, my son, was dead, and is alive again. He was lost, and is found.’ They began to celebrate. “Now his elder son was in the field. As he came near to the house, he heard music and dancing. He called one of the servants to him, and asked what was going on. He said to him, ‘Your brother has come, and your father has killed the fattened calf, because he has received him back safe and healthy.’ But he was angry, and would not go in. Therefore his father came out, and begged him. But he answered his father, ‘Behold, these many years I have served you, and I never disobeyed a commandment of yours, but you never gave me a goat, that I might celebrate with my friends. But when this your son came, who has devoured your living with prostitutes, you killed the fattened calf for him.’ “He said to him, ‘Son, you are always with me, and all that is mine is yours. But it was appropriate to celebrate and be glad, for this, your brother, was dead, and is alive again. He was lost, and is found.’”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "shrewd-manager": {
+  "reference": "Luke 16:1-13",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 1,
+    "text": "He also said to his disciples,\n“There was a certain rich man who had a manager. An accusation was made to him that this man was wasting his possessions."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 2,
+    "text": "He called him, and said to him, ‘What is this that I hear about you? Give an accounting of your management, for you can no longer be manager.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 3,
+    "text": "“The manager said within himself, ‘What will I do, seeing that my lord is taking away the management position from me? I don’t have strength to dig. I am ashamed to beg."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 4,
+    "text": "I know what I will do, so that when I am removed from management, they may receive me into their houses.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 5,
+    "text": "Calling each one of his lord’s debtors to him, he said to the first, ‘How much do you owe to my lord?’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 6,
+    "text": "He said, ‘A hundred batos of oil.’ He said to him, ‘Take your bill, and sit down quickly and write fifty.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 7,
+    "text": "Then he said to another, ‘How much do you owe?’ He said, ‘A hundred cors of wheat.’ He said to him, ‘Take your bill, and write eighty.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 8,
+    "text": "“His lord commended the dishonest manager because he had done wisely, for the children of this world are, in their own generation, wiser than the children of the light."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 9,
+    "text": "I tell you, make for yourselves friends by means of unrighteous mammon, so that when you fail, they may receive you into the eternal tents."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 10,
+    "text": "He who is faithful in a very little is faithful also in much. He who is dishonest in a very little is also dishonest in much."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 11,
+    "text": "If therefore you have not been faithful in the unrighteous mammon, who will commit to your trust the true riches?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 12,
+    "text": "If you have not been faithful in that which is another’s, who will give you that which is your own?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 13,
+    "text": "No servant can serve two masters, for either he will hate the one, and love the other; or else he will hold to one, and despise the other. You aren’t able to serve God and Mammon.”"
+   }
+  ],
+  "text": "He also said to his disciples,\n“There was a certain rich man who had a manager. An accusation was made to him that this man was wasting his possessions. He called him, and said to him, ‘What is this that I hear about you? Give an accounting of your management, for you can no longer be manager.’ “The manager said within himself, ‘What will I do, seeing that my lord is taking away the management position from me? I don’t have strength to dig. I am ashamed to beg. I know what I will do, so that when I am removed from management, they may receive me into their houses.’ Calling each one of his lord’s debtors to him, he said to the first, ‘How much do you owe to my lord?’ He said, ‘A hundred batos of oil.’ He said to him, ‘Take your bill, and sit down quickly and write fifty.’ Then he said to another, ‘How much do you owe?’ He said, ‘A hundred cors of wheat.’ He said to him, ‘Take your bill, and write eighty.’ “His lord commended the dishonest manager because he had done wisely, for the children of this world are, in their own generation, wiser than the children of the light. I tell you, make for yourselves friends by means of unrighteous mammon, so that when you fail, they may receive you into the eternal tents. He who is faithful in a very little is faithful also in much. He who is dishonest in a very little is also dishonest in much. If therefore you have not been faithful in the unrighteous mammon, who will commit to your trust the true riches? If you have not been faithful in that which is another’s, who will give you that which is your own? No servant can serve two masters, for either he will hate the one, and love the other; or else he will hold to one, and despise the other. You aren’t able to serve God and Mammon.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "rich-man-lazarus": {
+  "reference": "Luke 16:19-31",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 19,
+    "text": "“Now there was a certain rich man, and he was clothed in purple and fine linen, living in luxury every day."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 20,
+    "text": "A certain beggar, named Lazarus, was taken to his gate, full of sores,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 21,
+    "text": "and desiring to be fed with the crumbs that fell from the rich man’s table. Yes, even the dogs came and licked his sores."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 22,
+    "text": "The beggar died, and he was carried away by the angels to Abraham’s bosom. The rich man also died, and was buried."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 23,
+    "text": "In Hades, he lifted up his eyes, being in torment, and saw Abraham far off, and Lazarus at his bosom."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 24,
+    "text": "He cried and said, ‘Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue! For I am in anguish in this flame.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 25,
+    "text": "“But Abraham said, ‘Son, remember that you, in your lifetime, received your good things, and Lazarus, in the same way, bad things. But here he is now comforted, and you are in anguish."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 26,
+    "text": "Besides all this, between us and you there is a great gulf fixed, that those who want to pass from here to you are not able, and that no one may cross over from there to us.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 27,
+    "text": "“He said, ‘I ask you therefore, father, that you would send him to my father’s house;"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 28,
+    "text": "for I have five brothers, that he may testify to them, so they won’t also come into this place of torment.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 29,
+    "text": "“But Abraham said to him, ‘They have Moses and the prophets. Let them listen to them.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 30,
+    "text": "“He said, ‘No, father Abraham, but if one goes to them from the dead, they will repent.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 16,
+    "verse": 31,
+    "text": "“He said to him, ‘If they don’t listen to Moses and the prophets, neither will they be persuaded if one rises from the dead.’”"
+   }
+  ],
+  "text": "“Now there was a certain rich man, and he was clothed in purple and fine linen, living in luxury every day. A certain beggar, named Lazarus, was taken to his gate, full of sores, and desiring to be fed with the crumbs that fell from the rich man’s table. Yes, even the dogs came and licked his sores. The beggar died, and he was carried away by the angels to Abraham’s bosom. The rich man also died, and was buried. In Hades, he lifted up his eyes, being in torment, and saw Abraham far off, and Lazarus at his bosom. He cried and said, ‘Father Abraham, have mercy on me, and send Lazarus, that he may dip the tip of his finger in water, and cool my tongue! For I am in anguish in this flame.’ “But Abraham said, ‘Son, remember that you, in your lifetime, received your good things, and Lazarus, in the same way, bad things. But here he is now comforted, and you are in anguish. Besides all this, between us and you there is a great gulf fixed, that those who want to pass from here to you are not able, and that no one may cross over from there to us.’ “He said, ‘I ask you therefore, father, that you would send him to my father’s house; for I have five brothers, that he may testify to them, so they won’t also come into this place of torment.’ “But Abraham said to him, ‘They have Moses and the prophets. Let them listen to them.’ “He said, ‘No, father Abraham, but if one goes to them from the dead, they will repent.’ “He said to him, ‘If they don’t listen to Moses and the prophets, neither will they be persuaded if one rises from the dead.’”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "persistent-widow": {
+  "reference": "Luke 18:1-8",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 1,
+    "text": "He also spoke a parable to them that they must always pray, and not give up,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 2,
+    "text": "saying,\n“There was a judge in a certain city who didn’t fear God, and didn’t respect man."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 3,
+    "text": "A widow was in that city, and she often came to him, saying, ‘Defend me from my adversary!’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 4,
+    "text": "He wouldn’t for a while, but afterward he said to himself, ‘Though I neither fear God, nor respect man,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 5,
+    "text": "yet because this widow bothers me, I will defend her, or else she will wear me out by her continual coming.’”"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 6,
+    "text": "The Lord said,\n“Listen to what the unrighteous judge says."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 7,
+    "text": "Won’t God avenge his chosen ones, who are crying out to him day and night, and yet he exercises patience with them?"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 8,
+    "text": "I tell you that he will avenge them quickly. Nevertheless, when the Son of Man comes, will he find faith on the earth?”"
+   }
+  ],
+  "text": "He also spoke a parable to them that they must always pray, and not give up, saying,\n“There was a judge in a certain city who didn’t fear God, and didn’t respect man. A widow was in that city, and she often came to him, saying, ‘Defend me from my adversary!’ He wouldn’t for a while, but afterward he said to himself, ‘Though I neither fear God, nor respect man, yet because this widow bothers me, I will defend her, or else she will wear me out by her continual coming.’” The Lord said,\n“Listen to what the unrighteous judge says. Won’t God avenge his chosen ones, who are crying out to him day and night, and yet he exercises patience with them? I tell you that he will avenge them quickly. Nevertheless, when the Son of Man comes, will he find faith on the earth?”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "pharisee-tax-collector": {
+  "reference": "Luke 18:10-14",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 10,
+    "text": "“Two men went up into the temple to pray; one was a Pharisee, and the other was a tax collector."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 11,
+    "text": "The Pharisee stood and prayed to himself like this: ‘God, I thank you, that I am not like the rest of men, extortionists, unrighteous, adulterers, or even like this tax collector."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 12,
+    "text": "I fast twice a week. I give tithes of all that I get.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 13,
+    "text": "But the tax collector, standing far away, wouldn’t even lift up his eyes to heaven, but beat his breast, saying, ‘God, be merciful to me, a sinner!’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 18,
+    "verse": 14,
+    "text": "I tell you, this man went down to his house justified rather than the other; for everyone who exalts himself will be humbled, but he who humbles himself will be exalted.”"
+   }
+  ],
+  "text": "“Two men went up into the temple to pray; one was a Pharisee, and the other was a tax collector. The Pharisee stood and prayed to himself like this: ‘God, I thank you, that I am not like the rest of men, extortionists, unrighteous, adulterers, or even like this tax collector. I fast twice a week. I give tithes of all that I get.’ But the tax collector, standing far away, wouldn’t even lift up his eyes to heaven, but beat his breast, saying, ‘God, be merciful to me, a sinner!’ I tell you, this man went down to his house justified rather than the other; for everyone who exalts himself will be humbled, but he who humbles himself will be exalted.”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "ten-minas": {
+  "reference": "Luke 19:11-27",
+  "verses": [
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 11,
+    "text": "As they heard these things, he went on and told a parable, because he was near Jerusalem, and they supposed that God’s Kingdom would be revealed immediately."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 12,
+    "text": "He said therefore,\n“A certain nobleman went into a far country to receive for himself a kingdom, and to return."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 13,
+    "text": "He called ten servants of his, and gave them ten mina coins,\n\nand told them, ‘Conduct business until I come.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 14,
+    "text": "But his citizens hated him, and sent an envoy after him, saying, ‘We don’t want this man to reign over us.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 15,
+    "text": "“When he had come back again, having received the kingdom, he commanded these servants, to whom he had given the money, to be called to him, that he might know what they had gained by conducting business."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 16,
+    "text": "The first came before him, saying, ‘Lord, your mina has made ten more minas.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 17,
+    "text": "“He said to him, ‘Well done, you good servant! Because you were found faithful with very little, you shall have authority over ten cities.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 18,
+    "text": "“The second came, saying, ‘Your mina, Lord, has made five minas.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 19,
+    "text": "“So he said to him, ‘And you are to be over five cities.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 20,
+    "text": "Another came, saying, ‘Lord, behold, your mina, which I kept laid away in a handkerchief,"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 21,
+    "text": "for I feared you, because you are an exacting man. You take up that which you didn’t lay down, and reap that which you didn’t sow.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 22,
+    "text": "“He said to him, ‘Out of your own mouth will I judge you, you wicked servant! You knew that I am an exacting man, taking up that which I didn’t lay down, and reaping that which I didn’t sow."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 23,
+    "text": "Then why didn’t you deposit my money in the bank, and at my coming, I might have earned interest on it?’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 24,
+    "text": "He said to those who stood by, ‘Take the mina away from him, and give it to him who has the ten minas.’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 25,
+    "text": "“They said to him, ‘Lord, he has ten minas!’"
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 26,
+    "text": "‘For I tell you that to everyone who has, will more be given; but from him who doesn’t have, even that which he has will be taken away from him."
+   },
+   {
+    "book_id": "LUK",
+    "book_name": "Luke",
+    "chapter": 19,
+    "verse": 27,
+    "text": "But bring those enemies of mine who didn’t want me to reign over them here, and kill them before me.’”"
+   }
+  ],
+  "text": "As they heard these things, he went on and told a parable, because he was near Jerusalem, and they supposed that God’s Kingdom would be revealed immediately. He said therefore,\n“A certain nobleman went into a far country to receive for himself a kingdom, and to return. He called ten servants of his, and gave them ten mina coins,\n\nand told them, ‘Conduct business until I come.’ But his citizens hated him, and sent an envoy after him, saying, ‘We don’t want this man to reign over us.’ “When he had come back again, having received the kingdom, he commanded these servants, to whom he had given the money, to be called to him, that he might know what they had gained by conducting business. The first came before him, saying, ‘Lord, your mina has made ten more minas.’ “He said to him, ‘Well done, you good servant! Because you were found faithful with very little, you shall have authority over ten cities.’ “The second came, saying, ‘Your mina, Lord, has made five minas.’ “So he said to him, ‘And you are to be over five cities.’ Another came, saying, ‘Lord, behold, your mina, which I kept laid away in a handkerchief, for I feared you, because you are an exacting man. You take up that which you didn’t lay down, and reap that which you didn’t sow.’ “He said to him, ‘Out of your own mouth will I judge you, you wicked servant! You knew that I am an exacting man, taking up that which I didn’t lay down, and reaping that which I didn’t sow. Then why didn’t you deposit my money in the bank, and at my coming, I might have earned interest on it?’ He said to those who stood by, ‘Take the mina away from him, and give it to him who has the ten minas.’ “They said to him, ‘Lord, he has ten minas!’ ‘For I tell you that to everyone who has, will more be given; but from him who doesn’t have, even that which he has will be taken away from him. But bring those enemies of mine who didn’t want me to reign over them here, and kill them before me.’”",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "nathan-ewe-lamb": {
+  "reference": "2 Samuel 12:1-7",
+  "verses": [
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 1,
+    "text": "Yahweh sent Nathan to David. He came to him, and said to him, “There were two men in one city; the one rich, and the other poor."
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 2,
+    "text": "The rich man had very many flocks and herds,"
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 3,
+    "text": "but the poor man had nothing, except one little ewe lamb, which he had bought and raised. It grew up together with him, and with his children. It ate of his own food, drank of his own cup, and lay in his bosom, and was like a daughter to him."
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 4,
+    "text": "A traveler came to the rich man, and he spared to take of his own flock and of his own herd, to prepare for the wayfaring man who had come to him, but took the poor man’s lamb, and prepared it for the man who had come to him.”"
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 5,
+    "text": "David’s anger burned hot against the man, and he said to Nathan, “As Yahweh lives, the man who has done this deserves to die!"
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 6,
+    "text": "He must restore the lamb fourfold, because he did this thing, and because he had no pity!”"
+   },
+   {
+    "book_id": "2SA",
+    "book_name": "2 Samuel",
+    "chapter": 12,
+    "verse": 7,
+    "text": "Nathan said to David, “You are the man. This is what Yahweh, the God of Israel, says: ‘I anointed you king over Israel, and I delivered you out of the hand of Saul."
+   }
+  ],
+  "text": "Yahweh sent Nathan to David. He came to him, and said to him, “There were two men in one city; the one rich, and the other poor. The rich man had very many flocks and herds, but the poor man had nothing, except one little ewe lamb, which he had bought and raised. It grew up together with him, and with his children. It ate of his own food, drank of his own cup, and lay in his bosom, and was like a daughter to him. A traveler came to the rich man, and he spared to take of his own flock and of his own herd, to prepare for the wayfaring man who had come to him, but took the poor man’s lamb, and prepared it for the man who had come to him.” David’s anger burned hot against the man, and he said to Nathan, “As Yahweh lives, the man who has done this deserves to die! He must restore the lamb fourfold, because he did this thing, and because he had no pity!” Nathan said to David, “You are the man. This is what Yahweh, the God of Israel, says: ‘I anointed you king over Israel, and I delivered you out of the hand of Saul.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ },
+ "isaiah-vineyard": {
+  "reference": "Isaiah 5:1-7",
+  "verses": [
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 1,
+    "text": "Let me sing for my well beloved a song of my beloved about his vineyard.\nMy beloved had a vineyard on a very fruitful hill."
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 2,
+    "text": "He dug it up,\ngathered out its stones,\nplanted it with the choicest vine,\nbuilt a tower in the middle of it,\nand also cut out a wine press therein.\nHe looked for it to yield grapes,\nbut it yielded wild grapes."
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 3,
+    "text": "“Now, inhabitants of Jerusalem and men of Judah,\nplease judge between me and my vineyard."
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 4,
+    "text": "What could have been done more to my vineyard, that I have not done in it?\nWhy, when I looked for it to yield grapes, did it yield wild grapes?"
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 5,
+    "text": "Now I will tell you what I will do to my vineyard.\nI will take away its hedge, and it will be eaten up.\nI will break down its wall, and it will be trampled down."
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 6,
+    "text": "I will lay it a wasteland.\nIt won’t be pruned nor hoed,\nbut it will grow briers and thorns.\nI will also command the clouds that they rain no rain on it.”"
+   },
+   {
+    "book_id": "ISA",
+    "book_name": "Isaiah",
+    "chapter": 5,
+    "verse": 7,
+    "text": "For the vineyard of Yahweh of Armies is the house of Israel,\nand the men of Judah his pleasant plant:\nand he looked for justice, but, behold, oppression;\nfor righteousness, but, behold, a cry of distress."
+   }
+  ],
+  "text": "Let me sing for my well beloved a song of my beloved about his vineyard.\nMy beloved had a vineyard on a very fruitful hill. He dug it up,\ngathered out its stones,\nplanted it with the choicest vine,\nbuilt a tower in the middle of it,\nand also cut out a wine press therein.\nHe looked for it to yield grapes,\nbut it yielded wild grapes. “Now, inhabitants of Jerusalem and men of Judah,\nplease judge between me and my vineyard. What could have been done more to my vineyard, that I have not done in it?\nWhy, when I looked for it to yield grapes, did it yield wild grapes? Now I will tell you what I will do to my vineyard.\nI will take away its hedge, and it will be eaten up.\nI will break down its wall, and it will be trampled down. I will lay it a wasteland.\nIt won’t be pruned nor hoed,\nbut it will grow briers and thorns.\nI will also command the clouds that they rain no rain on it.” For the vineyard of Yahweh of Armies is the house of Israel,\nand the men of Judah his pleasant plant:\nand he looked for justice, but, behold, oppression;\nfor righteousness, but, behold, a cry of distress.",
+  "translation_id": "web",
+  "translation_name": "World English Bible",
+  "translation_note": "Public Domain"
+ }
+}
