@@ -16,6 +16,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function VersesPage() {
-  return <VersesClient />;
+export default async function VersesPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string | string[] }>;
+}) {
+  const params = await searchParams;
+  const raw = Array.isArray(params.q) ? params.q[0] : params.q;
+  const initialQuery = (raw ?? "").trim().slice(0, 100);
+  return <VersesClient key={initialQuery} initialQuery={initialQuery} />;
 }

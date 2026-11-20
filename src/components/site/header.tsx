@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
+import { GlobalSearch } from "@/components/site/global-search";
 
 const NAV = [
   { href: "/", label: "Home" },
@@ -26,11 +27,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border/60 bg-background/70 backdrop-blur-xl supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-2 px-4">
-        <Link href="/" className="group flex items-center gap-2.5" aria-label="Daily Dose of Gospels — home">
+        <Link href="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Daily Dose of Gospels — home">
           {/* Gold gradient cross medallion */}
           <span
             aria-hidden
-            className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-b from-[#3D4F84] to-[#1C2947] shadow-[0_4px_14px_-4px_rgb(18_26_43/0.5)] ring-1 ring-gold/30 transition-shadow group-hover:ring-gold/60"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-gradient-to-b from-[#3D4F84] to-[#1C2947] shadow-[0_4px_14px_-4px_rgb(18_26_43/0.5)] ring-1 ring-gold/30 transition-shadow group-hover:ring-gold/60"
           >
             <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="url(#ddog-header-gold)" strokeWidth="2.2" strokeLinecap="round">
               <defs>
@@ -42,12 +43,12 @@ export function SiteHeader() {
               <path d="M12 4v16M7.5 9h9" />
             </svg>
           </span>
-          <span className="font-display text-[1.05rem] font-semibold tracking-tight transition-colors group-hover:text-gold-foreground dark:group-hover:text-gold sm:text-lg">
+          <span className="font-display text-[1.02rem] font-semibold tracking-tight transition-colors group-hover:text-gold-foreground dark:group-hover:text-gold sm:text-[1.08rem]">
             Daily Dose of Gospels
           </span>
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-1 md:flex">
+        <nav aria-label="Main navigation" className="hidden items-center gap-0.5 md:flex">
           {NAV.map((item) => {
             const active = pathname === item.href;
             return (
@@ -56,7 +57,7 @@ export function SiteHeader() {
                 href={item.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "relative rounded-md px-3 py-2 text-[0.92rem] font-medium tracking-[0.01em] transition-colors",
+                  "relative whitespace-nowrap rounded-md px-2.5 py-2 text-[0.88rem] font-medium tracking-[0.01em] transition-colors xl:px-3 xl:text-[0.92rem]",
                   active ? "text-accent-foreground" : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -72,7 +73,7 @@ export function SiteHeader() {
                 {!active && (
                   <span
                     aria-hidden
-                    className="absolute inset-x-3 bottom-1 h-px origin-left scale-x-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-transform duration-300 group-hover:scale-x-100 hover:scale-x-100"
+                    className="absolute inset-x-2.5 bottom-1 h-px origin-left scale-x-0 bg-gradient-to-r from-gold/0 via-gold to-gold/0 transition-transform duration-300 group-hover:scale-x-100 hover:scale-x-100"
                   />
                 )}
               </Link>
@@ -80,7 +81,8 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center gap-1">
+        <div className="flex shrink-0 items-center gap-1.5">
+          <GlobalSearch />
           <Button
             variant="ghost"
             size="icon"

@@ -402,6 +402,22 @@ export const DUMMY_USAGE_STATS: Record<string, number> = {
   llm_calls: 24,
   off_topic: 2,
   crisis_detected: 0,
+  "search:total": 68,
+  "search:verse:Psalm 23": 19,
+  "search:verse:Philippians 4:6": 14,
+  "search:verse:John 3:16": 11,
+  "search:verse:Isaiah 41:10": 9,
+  "search:verse:Jeremiah 29:11": 7,
+  "search:topic:Anxiety": 22,
+  "search:topic:Hope": 15,
+  "search:topic:Forgiveness": 12,
+  "search:topic:Grief": 10,
+  "search:topic:Peace": 8,
+  "search:category:STRUGGLES": 24,
+  "search:category:PRAYER": 19,
+  "search:category:TESTIMONY": 16,
+  "search:category:ENCOURAGEMENT": 11,
+  "search:category:REFLECTION": 8,
 };
 
 export const DUMMY_CACHED_RESPONSES: DummyCachedResponseSeed[] = [

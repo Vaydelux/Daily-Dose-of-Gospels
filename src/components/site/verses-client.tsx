@@ -17,9 +17,9 @@ const HERO_VERSE = {
   ref: "Matthew 4:4",
 };
 
-export function VersesClient() {
+export function VersesClient({ initialQuery = "" }: { initialQuery?: string }) {
   const [theme, setTheme] = useState<ThemeKey | "ALL" | "FAVORITES">("ALL");
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState(initialQuery);
   const [favorites, toggleFavorite] = useFavorites();
 
   const filtered = useMemo(() => {

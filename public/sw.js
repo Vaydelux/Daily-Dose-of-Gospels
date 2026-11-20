@@ -15,7 +15,9 @@ const PAGES_CACHE = `${VERSION}-pages`;
 const ASSETS_CACHE = `${VERSION}-assets`;
 const PRECACHE = ["/offline.html", "/manifest.webmanifest", "/icons/icon-192.png", "/icons/icon-512.png"];
 
-const IS_DEV_HOST = ["localhost", "127.0.0.1", "0.0.0.0"].includes(self.location.hostname);
+const IS_DEV_HOST =
+  ["localhost", "127.0.0.1", "0.0.0.0"].includes(self.location.hostname) ||
+  self.location.hostname.startsWith("ais-dev-");
 
 self.addEventListener("install", (event) => {
   event.waitUntil(

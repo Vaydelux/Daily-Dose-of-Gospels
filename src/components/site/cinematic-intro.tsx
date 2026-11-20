@@ -25,25 +25,25 @@ export function CinematicIntro() {
   const [phase, setPhase] = useState<"playing" | "leaving" | "gone">("playing");
   const reduce = useReducedMotion();
 
-  // Schedule the sequence exactly once per mount. `useReducedMotion()` can
-  // settle from null → false right after hydration; without this guard the
-  // effect would re-run, read the freshly-written SEEN_KEY and wrongly skip
-  // the full intro for everyone.
-  const scheduled = useRef(false);
+  // Capture the short-vs-full decision once before writing SEEN_KEY so
+  // StrictMode's cleanup + remount (or `useReducedMotion` settling) keeps
+  // the same duration while still re-scheduling timers after cleanup.
+  const shortDecisionRef = useRef<boolean | null>(null);
   useEffect(() => {
-    if (scheduled.current) return;
-    scheduled.current = true;
+    if (shortDecisionRef.current === null) {
+      let seen = false;
+      try {
+        seen = Boolean(sessionStorage.getItem(SEEN_KEY));
+        sessionStorage.setItem(SEEN_KEY, "1");
+      } catch {
+        /* private mode — the intro simply plays each load */
+      }
+      shortDecisionRef.current = seen || Boolean(reduce);
+    }
 
-    const seen = typeof window !== "undefined" && sessionStorage.getItem(SEEN_KEY);
-    const short = Boolean(seen) || Boolean(reduce);
+    const short = shortDecisionRef.current || Boolean(reduce);
     const exitAt = short ? 250 : 3600;
     const removeAt = short ? 1050 : 4700;
-
-    try {
-      sessionStorage.setItem(SEEN_KEY, "1");
-    } catch {
-      /* private mode — the intro simply plays each load */
-    }
 
     const t1 = setTimeout(() => setPhase("leaving"), exitAt);
     const t2 = setTimeout(() => setPhase("gone"), removeAt);

@@ -75,8 +75,26 @@ export function PostDetail({ id }: { id: string }) {
   }, [id]);
 
   useEffect(() => {
-    void load();
-  }, [load]);
+    let active = true;
+    async function fetchDetail() {
+      try {
+        const res = await fetch(`/api/posts/${id}`);
+        if (res.status === 404) {
+          if (active) setNotFound(true);
+          return;
+        }
+        if (!res.ok) throw new Error();
+        const detail = (await res.json()) as Detail;
+        if (active) setData(detail);
+      } catch {
+        if (active) toast({ title: "Couldn't load this post — please refresh.", variant: "destructive" });
+      }
+    }
+    void fetchDetail();
+    return () => {
+      active = false;
+    };
+  }, [id]);
 
   async function sendComment(e: React.FormEvent) {
     e.preventDefault();

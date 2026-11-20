@@ -127,6 +127,8 @@ const getPlayerTracks = unstable_cache(
   { revalidate: 300, tags: ["tracks"] }
 );
 
+const FETCH_GUARD_SCRIPT = `(function(){try{var d=Object.getOwnPropertyDescriptor(window,"fetch");if(d&&d.configurable&&d.get&&!d.set){var origGet=d.get,customFetch,hasCustom=false;Object.defineProperty(window,"fetch",{configurable:true,enumerable:d.enumerable,get:function(){return hasCustom?customFetch:origGet.call(window);},set:function(v){customFetch=v;hasCustom=true;}});}}catch(_){}window.addEventListener("error",function(e){var src=(e&&(e.filename||(e.error&&e.error.stack)))||"";var msg=String((e&&e.message)||"");if(typeof src==="string"&&(src.indexOf("chrome-extension://")!==-1||src.indexOf("moz-extension://")!==-1)&&msg.indexOf("Cannot set property fetch")!==-1){e.preventDefault();e.stopImmediatePropagation();}},true);})();`;
+
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -134,6 +136,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: FETCH_GUARD_SCRIPT }} />
+      </head>
       <body
         className={`${inter.variable} ${geistMono.variable} ${sourceSerif.variable} antialiased bg-background text-foreground`}
       >

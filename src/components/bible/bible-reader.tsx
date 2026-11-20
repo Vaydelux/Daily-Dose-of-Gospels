@@ -159,7 +159,10 @@ export function BibleReader({
   const docRef = useRef<ReaderDoc | null>(doc);
   const autoContinueRef = useRef(false);
   const fxLiteRef = useRef(false);
-  docRef.current = doc;
+
+  useEffect(() => {
+    docRef.current = doc;
+  }, [doc]);
 
   /* ─── Derived ────────────────────────────────────────────────────────── */
   const duo: 1 | 2 = isSpread ? 2 : 1;
@@ -169,6 +172,7 @@ export function BibleReader({
     [doc, metrics],
   );
   const maxView = Math.max(0, Math.ceil(pages.length / duo) - 1);
+  const currentView = Math.min(view, maxView);
 
   const bookMeta = useMemo(() => books.find((b) => b.id === doc?.bookId) ?? null, [books, doc]);
   const bookIndex = useMemo(() => books.findIndex((b) => b.id === doc?.bookId), [books, doc]);
@@ -382,7 +386,7 @@ export function BibleReader({
 
   const turn = (dir: "next" | "prev") => {
     if (loading || coverRef.current !== "open") return;
-    const target = dir === "next" ? view + 1 : view - 1;
+    const target = dir === "next" ? currentView + 1 : currentView - 1;
     if (target < 0 || target > maxView) return;
     if (fxLiteRef.current) {
       // Lite path: no 3D sheet — swap and let the keyed slots fade in.
@@ -395,7 +399,9 @@ export function BibleReader({
     setFlip({ dir, target });
   };
   const turnRef = useRef(turn);
-  turnRef.current = turn;
+  useEffect(() => {
+    turnRef.current = turn;
+  });
 
   /* While the Scripture is read aloud, the reader turns its own leaves. */
   useEffect(() => {
@@ -404,15 +410,20 @@ export function BibleReader({
     const idx = pages.findIndex((pg) => pg.some((x) => x.verse === v));
     if (idx < 0) return;
     const target = Math.floor(idx / duo);
-    if (target === view) return;
+    if (target === currentView) return;
     if (fxLiteRef.current) {
-      setView(target);
-      setArriveKey((k) => k + 1);
-      return;
+      const id = window.setTimeout(() => {
+        setView(target);
+        setArriveKey((k) => k + 1);
+      }, 0);
+      return () => window.clearTimeout(id);
     }
-    flipTargetRef.current = target;
-    setFlip({ dir: target > view ? "next" : "prev", target });
-  }, [narration.currentVerse, pages, duo, view, flip, loading, doc]);
+    const id = window.setTimeout(() => {
+      flipTargetRef.current = target;
+      setFlip({ dir: target > currentView ? "next" : "prev", target });
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, [narration.currentVerse, pages, duo, currentView, flip, loading, doc]);
 
   /* A finished chapter quietly hands the reading to the next one. */
   useEffect(() => {
@@ -441,13 +452,12 @@ export function BibleReader({
     if (fv === null) return;
     const idx = pages.findIndex((pg) => pg.some((v) => v.verse === fv));
     focusVerseRef.current = null;
-    if (idx >= 0) setView(Math.floor(idx / duo));
+    if (idx >= 0) {
+      const target = Math.floor(idx / duo);
+      const id = window.setTimeout(() => setView(target), 0);
+      return () => window.clearTimeout(id);
+    }
   }, [pages, duo]);
-
-  /* Keep the view in range when the viewport mode changes. */
-  useEffect(() => {
-    setView((v) => Math.min(v, maxView));
-  }, [maxView]);
 
   /* ─── Spread vs single page (matchMedia) ─────────────────────────────── */
   useEffect(() => {
@@ -499,28 +509,32 @@ export function BibleReader({
   const bootedRef = useRef(false);
   useEffect(() => {
     if (bootedRef.current) return;
-    bootedRef.current = true;
-    try {
-      const rl = localStorage.getItem(RED_LETTER_KEY);
-      if (rl !== null) setRedLetterOn(rl === "1");
-    } catch {
-      /* defaults hold */
-    }
-    if (!allowResume) return; // a deep link names the page explicitly
-    try {
-      const raw = localStorage.getItem(POS_KEY);
-      if (!raw) return;
-      const p = JSON.parse(raw) as { b?: string; c?: number; t?: string };
-      if (!p?.b || !Number.isInteger(p?.c) || !p?.t) return;
-      const same =
-        initialDoc &&
-        p.b === initialDoc.bookId &&
-        p.c === initialDoc.chapter &&
-        p.t === initialDoc.translationId;
-      if (!same) void loadChapter(p.b, p.c as number, p.t as string);
-    } catch {
-      /* corrupted storage — start from John 1 */
-    }
+    const id = window.setTimeout(() => {
+      if (bootedRef.current) return;
+      bootedRef.current = true;
+      try {
+        const rl = localStorage.getItem(RED_LETTER_KEY);
+        if (rl !== null) setRedLetterOn(rl === "1");
+      } catch {
+        /* defaults hold */
+      }
+      if (!allowResume) return; // a deep link names the page explicitly
+      try {
+        const raw = localStorage.getItem(POS_KEY);
+        if (!raw) return;
+        const p = JSON.parse(raw) as { b?: string; c?: number; t?: string };
+        if (!p?.b || !Number.isInteger(p?.c) || !p?.t) return;
+        const same =
+          initialDoc &&
+          p.b === initialDoc.bookId &&
+          p.c === initialDoc.chapter &&
+          p.t === initialDoc.translationId;
+        if (!same) void loadChapter(p.b, p.c as number, p.t as string);
+      } catch {
+        /* corrupted storage — start from John 1 */
+      }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, [loadChapter, initialDoc, allowResume]);
 
   /* ─── Quietly ink the neighbouring chapters — "Next" feels instant ──── */
@@ -570,8 +584,9 @@ export function BibleReader({
   const fxBootedRef = useRef(false);
   useEffect(() => {
     if (fxBootedRef.current) return;
-    fxBootedRef.current = true;
     const id = window.setTimeout(() => {
+      if (fxBootedRef.current) return;
+      fxBootedRef.current = true;
       let probeLite = false;
       try {
         // The first-visit frame-rate probe (PerfProbe) may have convicted this
@@ -616,14 +631,17 @@ export function BibleReader({
 
   /* A returning reader in the same session finds the book already open. */
   useEffect(() => {
-    try {
-      if (sessionStorage.getItem(OPEN_KEY) === "1") {
-        coverRef.current = "open";
-        setCoverState("open");
+    const id = window.setTimeout(() => {
+      try {
+        if (sessionStorage.getItem(OPEN_KEY) === "1") {
+          coverRef.current = "open";
+          setCoverState("open");
+        }
+      } catch {
+        /* first visit in this session — the cover greets */
       }
-    } catch {
-      /* first visit in this session — the cover greets */
-    }
+    }, 0);
+    return () => window.clearTimeout(id);
   }, []);
 
   /* ─── Handlers ───────────────────────────────────────────────────────── */
@@ -1004,7 +1022,7 @@ export function BibleReader({
           }
           pages={doc ? pages : [[]]}
           duo={duo}
-          view={Math.min(view, maxView)}
+          view={currentView}
           flip={flip}
           onFlipDone={commitFlip}
           loading={loading}
@@ -1027,7 +1045,7 @@ export function BibleReader({
           size="icon"
           className="h-9 w-9 rounded-full bg-card"
           aria-label="Turn back a page"
-          disabled={view <= 0 || controlsBusy}
+          disabled={currentView <= 0 || controlsBusy}
           onClick={() => turn("prev")}
         >
           <ChevronLeft className="h-4 w-4" aria-hidden />
@@ -1036,7 +1054,7 @@ export function BibleReader({
           aria-live="polite"
           className="min-w-[150px] text-center font-mono text-[11px] tracking-[0.24em] text-muted-foreground uppercase"
         >
-          {doc ? `${leafLabel} ${view + 1} of ${maxView + 1}` : "—"}
+          {doc ? `${leafLabel} ${currentView + 1} of ${maxView + 1}` : "—"}
         </span>
         <Button
           type="button"
@@ -1044,7 +1062,7 @@ export function BibleReader({
           size="icon"
           className="h-9 w-9 rounded-full bg-card"
           aria-label="Turn forward a page"
-          disabled={view >= maxView || controlsBusy}
+          disabled={currentView >= maxView || controlsBusy}
           onClick={() => turn("next")}
         >
           <ChevronRight className="h-4 w-4" aria-hidden />

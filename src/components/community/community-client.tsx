@@ -47,22 +47,29 @@ export function CommunityClient() {
   const [posts, setPosts] = useState<Post[] | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const load = useCallback(async (cat: string) => {
+  const handleCategoryChange = useCallback((nextCategory: string) => {
+    setCategory(nextCategory);
     setPosts(null);
     setError(null);
-    try {
-      const res = await fetch(`/api/posts?category=${encodeURIComponent(cat)}`);
-      if (!res.ok) throw new Error();
-      const data = (await res.json()) as { posts: Post[] };
-      setPosts(data.posts);
-    } catch {
-      setError("We couldn't load the community right now — please refresh in a moment.");
-    }
   }, []);
 
   useEffect(() => {
-    void load(category);
-  }, [category, load]);
+    let active = true;
+    async function fetchPosts() {
+      try {
+        const res = await fetch(`/api/posts?category=${encodeURIComponent(category)}`);
+        if (!res.ok) throw new Error();
+        const data = (await res.json()) as { posts: Post[] };
+        if (active) setPosts(data.posts);
+      } catch {
+        if (active) setError("We couldn't load the community right now — please refresh in a moment.");
+      }
+    }
+    void fetchPosts();
+    return () => {
+      active = false;
+    };
+  }, [category]);
 
   const emptyCopy = useMemo(() => {
     if (category === "TESTIMONY") return "No testimonies yet — yours could be the first spark of hope someone reads today.";
@@ -86,7 +93,7 @@ export function CommunityClient() {
         </Button>
       </header>
 
-      <Tabs value={category} onValueChange={setCategory} className="mt-6">
+      <Tabs value={category} onValueChange={handleCategoryChange} className="mt-6">
         <TabsList className="flex w-full flex-wrap justify-start gap-1 overflow-x-auto bg-transparent p-0 slim-scroll">
           {CATEGORIES.map((c) => (
             <TabsTrigger

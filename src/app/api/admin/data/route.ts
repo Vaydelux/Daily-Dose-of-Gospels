@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { db } from "@/lib/db";
 import { isAdmin } from "@/lib/admin-auth";
 import { getStatMap } from "@/lib/cache";
+import { getSearchAnalyticsSummary } from "@/lib/search-analytics";
 import { aiBackend, chatModelName, embeddingModelName } from "@/lib/ai/provider";
 
 export const dynamic = "force-dynamic";
@@ -12,8 +13,9 @@ export async function GET() {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const [stats, hiddenPosts, flaggedComments, moderationLog, cacheRows, counts] = await Promise.all([
+  const [stats, searchInsights, hiddenPosts, flaggedComments, moderationLog, cacheRows, counts] = await Promise.all([
     getStatMap(),
+    getSearchAnalyticsSummary(12),
     db.post.findMany({
       where: { OR: [{ hidden: true }, { reportCount: { gt: 0 } }, { crisisFlag: true }] },
       orderBy: { createdAt: "desc" },
@@ -53,5 +55,6 @@ export async function GET() {
     })),
     moderationLog,
     cacheRows,
+    searchInsights,
   });
 }

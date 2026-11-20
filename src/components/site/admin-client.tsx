@@ -7,7 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { SLine, LoadingBanner } from "@/components/site/skeletons";
-import { Lock, LogOut, RefreshCw } from "lucide-react";
+import { BookOpen, Lock, LogOut, MessageSquareQuote, RefreshCw, Search } from "lucide-react";
+import type { SearchAnalyticsSummary } from "@/lib/search-analytics-core";
 
 type AdminData = {
   backend: { ai: string; chatModel: string; embeddingModel: string };
@@ -20,6 +21,7 @@ type AdminData = {
   flaggedComments: Array<{ id: string; postId: string; body: string; hidden: boolean; reportCount: number; createdAt: string }>;
   moderationLog: Array<{ id: string; targetType: string; targetId: string; action: string; reason: string; createdAt: string }>;
   cacheRows: Array<{ id: string; normalized: string; language: string; hits: number; qualityScore: number; votes: number; createdAt: string }>;
+  searchInsights?: SearchAnalyticsSummary;
 };
 
 function Stat({ label, value }: { label: string; value: string | number }) {
@@ -33,12 +35,12 @@ function Stat({ label, value }: { label: string; value: string | number }) {
   );
 }
 
-export function AdminClient() {
-  const [authed, setAuthed] = useState<boolean | null>(null);
+export function AdminClient({ initialAuthed = false }: { initialAuthed?: boolean }) {
+  const [authed, setAuthed] = useState<boolean>(initialAuthed);
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<AdminData | null>(null);
-  const [busy, setBusy] = useState(false);
+  const [busy, setBusy] = useState(initialAuthed);
 
   const load = useCallback(async () => {
     setBusy(true);
@@ -58,8 +60,29 @@ export function AdminClient() {
   }, []);
 
   useEffect(() => {
-    void load();
-  }, [load]);
+    if (!initialAuthed) return;
+    let active = true;
+    async function fetchInitial() {
+      try {
+        const res = await fetch("/api/admin/data");
+        if (!active) return;
+        if (res.status === 401) {
+          setAuthed(false);
+          return;
+        }
+        setAuthed(true);
+        setData((await res.json()) as AdminData);
+      } catch {
+        if (active) setError("Could not load admin data.");
+      } finally {
+        if (active) setBusy(false);
+      }
+    }
+    void fetchInitial();
+    return () => {
+      active = false;
+    };
+  }, [initialAuthed]);
 
   async function login(e: React.FormEvent) {
     e.preventDefault();
@@ -187,7 +210,8 @@ export function AdminClient() {
             <Stat label="Cache hit rate" value={`${hitRate}%`} />
           </div>
 
-          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            <Stat label="Total searches" value={(data.searchInsights?.totalSearches ?? 0).toLocaleString()} />
             <Stat label="Tokens saved (est.)" value={(data.stats.tokens_saved ?? 0).toLocaleString()} />
             <Stat label="Off-topic blocked" value={data.stats.off_topic ?? 0} />
             <Stat label="Crisis detections" value={data.stats.crisis_detected ?? 0} />
@@ -195,8 +219,9 @@ export function AdminClient() {
           </div>
 
           <Tabs defaultValue="queue" className="mt-8">
-            <TabsList>
+            <TabsList className="flex-wrap">
               <TabsTrigger value="queue">Review queue</TabsTrigger>
+              <TabsTrigger value="search">Search insights</TabsTrigger>
               <TabsTrigger value="cache">Semantic cache</TabsTrigger>
               <TabsTrigger value="log">Moderation log</TabsTrigger>
             </TabsList>
@@ -250,6 +275,128 @@ export function AdminClient() {
                   ))}
                 </>
               ) : null}
+            </TabsContent>
+
+            <TabsContent value="search" className="mt-4 space-y-4">
+              {!data.searchInsights ||
+              (data.searchInsights.topVerses.length === 0 && data.searchInsights.topTopics.length === 0) ? (
+                <Card>
+                  <CardContent className="p-6 text-center">
+                    <Search className="mx-auto h-6 w-6 text-muted-foreground" aria-hidden />
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      No search queries have been recorded yet. Insights will appear here as visitors search Scripture and community topics.
+                    </p>
+                  </CardContent>
+                </Card>
+              ) : (
+                <>
+                  <p className="text-xs text-muted-foreground">
+                    Aggregated anonymously from header searches (PII scrubbed before logging; {data.searchInsights.totalSearches.toLocaleString()} total queries recorded).
+                  </p>
+
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {/* Most Queried Bible Verses */}
+                    <Card>
+                      <CardContent className="p-5">
+                        <div className="flex items-center justify-between gap-2">
+                          <h2 className="flex items-center gap-2 font-display text-lg font-semibold">
+                            <BookOpen className="h-4 w-4 text-gold" aria-hidden />
+                            Most queried Bible verses
+                          </h2>
+                          <Badge variant="secondary">{data.searchInsights.topVerses.length} tracked</Badge>
+                        </div>
+                        {data.searchInsights.topVerses.length === 0 ? (
+                          <p className="mt-4 text-sm text-muted-foreground">No Bible verse references queried yet.</p>
+                        ) : (
+                          <ol className="mt-4 space-y-3">
+                            {(() => {
+                              const maxCount = Math.max(1, ...data.searchInsights.topVerses.map((v) => v.count));
+                              return data.searchInsights.topVerses.map((item, index) => (
+                                <li key={item.label} className="space-y-1">
+                                  <div className="flex items-baseline justify-between gap-2 text-sm">
+                                    <span className="truncate font-medium text-foreground">
+                                      <span className="mr-2 font-mono text-xs text-muted-foreground">{index + 1}.</span>
+                                      {item.label}
+                                    </span>
+                                    <span className="shrink-0 font-mono text-xs font-semibold text-foreground">
+                                      {item.count} {item.count === 1 ? "query" : "queries"}
+                                    </span>
+                                  </div>
+                                  <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+                                    <div
+                                      className="h-full rounded-full bg-gold transition-all"
+                                      style={{ width: `${Math.max(8, Math.round((item.count / maxCount) * 100))}%` }}
+                                    />
+                                  </div>
+                                </li>
+                              ));
+                            })()}
+                          </ol>
+                        )}
+                      </CardContent>
+                    </Card>
+
+                    {/* Most Queried Community Topics */}
+                    <Card>
+                      <CardContent className="p-5">
+                        <div className="flex items-center justify-between gap-2">
+                          <h2 className="flex items-center gap-2 font-display text-lg font-semibold">
+                            <MessageSquareQuote className="h-4 w-4 text-gold" aria-hidden />
+                            Most queried community topics
+                          </h2>
+                          <Badge variant="secondary">{data.searchInsights.topTopics.length} tracked</Badge>
+                        </div>
+                        {data.searchInsights.topTopics.length === 0 ? (
+                          <p className="mt-4 text-sm text-muted-foreground">No community topics queried yet.</p>
+                        ) : (
+                          <ol className="mt-4 space-y-3">
+                            {(() => {
+                              const maxCount = Math.max(1, ...data.searchInsights.topTopics.map((t) => t.count));
+                              return data.searchInsights.topTopics.map((item, index) => (
+                                <li key={item.label} className="space-y-1">
+                                  <div className="flex items-baseline justify-between gap-2 text-sm">
+                                    <span className="truncate font-medium text-foreground">
+                                      <span className="mr-2 font-mono text-xs text-muted-foreground">{index + 1}.</span>
+                                      {item.label}
+                                    </span>
+                                    <span className="shrink-0 font-mono text-xs font-semibold text-foreground">
+                                      {item.count} {item.count === 1 ? "query" : "queries"}
+                                    </span>
+                                  </div>
+                                  <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+                                    <div
+                                      className="h-full rounded-full bg-primary transition-all"
+                                      style={{ width: `${Math.max(8, Math.round((item.count / maxCount) * 100))}%` }}
+                                    />
+                                  </div>
+                                </li>
+                              ));
+                            })()}
+                          </ol>
+                        )}
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {data.searchInsights.topCategories.length > 0 ? (
+                    <Card>
+                      <CardContent className="p-5">
+                        <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                          Community categories matched by searches
+                        </h3>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {data.searchInsights.topCategories.map((cat) => (
+                            <Badge key={cat.category} variant="secondary" className="gap-1.5 px-3 py-1 text-xs">
+                              <span>{cat.label}</span>
+                              <span className="font-mono text-[11px] text-muted-foreground">{cat.count}</span>
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ) : null}
+                </>
+              )}
             </TabsContent>
 
             <TabsContent value="cache" className="mt-4">
